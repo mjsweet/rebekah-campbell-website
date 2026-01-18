@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-neutral-900 antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display font-medium;
+  }
+
+  /* Focus styles for accessibility */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-500;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .prose {
+    @apply max-w-none;
+  }
+
+  .prose h2 {
+    @apply mt-12 mb-4 text-2xl font-display font-medium text-neutral-900 sm:text-3xl;
+  }
+
+  .prose h3 {
+    @apply mt-8 mb-3 text-xl font-display font-medium text-neutral-900 sm:text-2xl;
+  }
+
+  .prose p {
+    @apply mb-4 text-base leading-relaxed text-neutral-900/80 sm:text-lg;
+  }
+
+  .prose ul {
+    @apply mb-4 list-disc pl-6 space-y-2;
+  }
+
+  .prose ol {
+    @apply mb-4 list-decimal pl-6 space-y-2;
+  }
+
+  .prose li {
+    @apply text-base leading-relaxed text-neutral-900/80 sm:text-lg;
+  }
+
+  .prose blockquote {
+    @apply my-6 border-l-4 border-primary-500 pl-6 italic text-neutral-900/70;
+  }
+
+  .prose a {
+    @apply text-primary-600 underline underline-offset-2 hover:text-primary-700 transition-colors;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-primary-500 text-white hover:bg-primary-600 focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-neutral-900 border border-neutral-900/20 hover:bg-neutral-900/5 focus:ring-2 focus:ring-neutral-900/20 focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply bg-transparent text-primary-600 border border-primary-500 hover:bg-primary-50 focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+}
+
+/* Skip to content link for accessibility */
+.skip-to-content {
+  @apply absolute left-4 top-4 z-50 -translate-y-full bg-primary-500 px-4 py-2 text-white transition-transform focus:translate-y-0;
+}

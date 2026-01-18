@@ -1,0 +1,142 @@
+---
+import Container from '@components/ui/Container.astro';
+import Input from '@components/ui/Input.astro';
+import Textarea from '@components/ui/Textarea.astro';
+import Button from '@components/ui/Button.astro';
+import { Mail, Phone, MapPin } from 'lucide-astro';
+import { SITE } from '@lib/constants';
+
+interface Props {
+  showContactInfo?: boolean;
+}
+
+const { showContactInfo = true } = Astro.props;
+---
+
+<section class="bg-white py-16 sm:py-20 lg:py-28">
+  <Container>
+    <div class:list={['grid gap-12', showContactInfo ? 'lg:grid-cols-2' : '']}>
+      <!-- Contact Form -->
+      <div>
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl mb-4">
+          Get in Touch
+        </h2>
+        <p class="text-lg text-neutral-900/70 mb-8">
+          Whether you're interested in coaching, speaking engagements, or media enquiries, I'd love to hear from you.
+        </p>
+
+        <form action="#" method="POST" class="space-y-6">
+          <div class="grid gap-6 sm:grid-cols-2">
+            <Input
+              name="firstName"
+              label="First name"
+              placeholder="Your first name"
+              required
+            />
+            <Input
+              name="lastName"
+              label="Last name"
+              placeholder="Your last name"
+              required
+            />
+          </div>
+          <Input
+            type="email"
+            name="email"
+            label="Email"
+            placeholder="you@example.com"
+            required
+          />
+          <Input
+            name="subject"
+            label="Subject"
+            placeholder="What is this regarding?"
+            required
+          />
+          <Textarea
+            name="message"
+            label="Message"
+            placeholder="Tell me more about your enquiry..."
+            rows={5}
+            required
+          />
+          <Button type="submit" variant="primary" size="lg">
+            Send Message
+          </Button>
+        </form>
+      </div>
+
+      {showContactInfo && (
+        <div class="lg:pl-12">
+          <div class="bg-neutral-50 rounded-xl p-8">
+            <h3 class="font-display text-xl font-medium text-neutral-900 mb-6">
+              Other Ways to Connect
+            </h3>
+
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-100 text-primary-600">
+                  <Mail class="h-5 w-5" aria-hidden="true" />
+                </div>
+                <div>
+                  <p class="font-medium text-neutral-900">Email</p>
+                  <a
+                    href={`mailto:${SITE.email}`}
+                    class="text-primary-600 hover:text-primary-700 transition-colors"
+                  >
+                    {SITE.email}
+                  </a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-100 text-primary-600">
+                  <MapPin class="h-5 w-5" aria-hidden="true" />
+                </div>
+                <div>
+                  <p class="font-medium text-neutral-900">Location</p>
+                  <p class="text-neutral-900/70">Sydney, Australia</p>
+                </div>
+              </div>
+            </div>
+
+            <hr class="my-8 border-neutral-900/10" />
+
+            <div>
+              <h4 class="font-medium text-neutral-900 mb-4">Connect on Social</h4>
+              <div class="flex gap-4">
+                <a
+                  href={SITE.social.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-neutral-900/60 hover:text-primary-600 transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  href={SITE.social.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-neutral-900/60 hover:text-primary-600 transition-colors"
+                  aria-label="Twitter"
+                >
+                  Twitter
+                </a>
+                <a
+                  href={SITE.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-neutral-900/60 hover:text-primary-600 transition-colors"
+                  aria-label="Instagram"
+                >
+                  Instagram
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  </Container>
+</section>

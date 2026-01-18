@@ -1,0 +1,59 @@
+---
+import Container from '@components/ui/Container.astro';
+import SectionHeader from '@components/ui/SectionHeader.astro';
+import { Check } from 'lucide-astro';
+
+interface Feature {
+  title: string;
+  description: string;
+  icon?: string;
+}
+
+interface Props {
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  features: Feature[];
+  columns?: 2 | 3 | 4;
+}
+
+const {
+  eyebrow,
+  title,
+  description,
+  features,
+  columns = 3,
+} = Astro.props;
+
+const gridCols = {
+  2: 'md:grid-cols-2',
+  3: 'md:grid-cols-2 lg:grid-cols-3',
+  4: 'md:grid-cols-2 lg:grid-cols-4',
+};
+---
+
+<section class="bg-white py-16 sm:py-20 lg:py-28">
+  <Container>
+    <SectionHeader
+      eyebrow={eyebrow}
+      title={title}
+      description={description}
+    />
+
+    <div class:list={['grid gap-8', gridCols[columns]]}>
+      {features.map((feature) => (
+        <div class="text-center">
+          <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 text-primary-600">
+            <Check class="h-6 w-6" aria-hidden="true" />
+          </div>
+          <h3 class="font-display text-xl font-medium text-neutral-900 mb-2">
+            {feature.title}
+          </h3>
+          <p class="text-neutral-900/70">
+            {feature.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </Container>
+</section>

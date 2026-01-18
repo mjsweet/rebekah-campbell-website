@@ -1,0 +1,57 @@
+---
+import Container from '@components/ui/Container.astro';
+import SectionHeader from '@components/ui/SectionHeader.astro';
+import Button from '@components/ui/Button.astro';
+import Card from '@components/ui/Card.astro';
+import Badge from '@components/ui/Badge.astro';
+import { COACHING_PROGRAMS } from '@lib/constants';
+import { Clock, ArrowRight } from 'lucide-astro';
+
+interface Props {
+  showHeader?: boolean;
+}
+
+const { showHeader = true } = Astro.props;
+---
+
+<section class="bg-neutral-50 py-16 sm:py-20 lg:py-28">
+  <Container>
+    {showHeader && (
+      <SectionHeader
+        eyebrow="Coaching Programs"
+        title="Three Paths to Transformation"
+        description="Whatever you're working towards, I've been there. Choose the journey that fits your goals."
+      />
+    )}
+
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {COACHING_PROGRAMS.map((program) => (
+        <Card padding="lg" hover>
+          <Badge variant="primary" size="sm" class="mb-4">
+            <Clock class="h-3 w-3 mr-1" aria-hidden="true" />
+            {program.duration}
+          </Badge>
+          <h3 class="font-display text-2xl font-medium text-neutral-900 mb-3">
+            {program.title}
+          </h3>
+          <p class="text-neutral-900/70 mb-6">
+            {program.description}
+          </p>
+          <a
+            href={program.href}
+            class="inline-flex items-center text-primary-600 font-medium hover:text-primary-700 transition-colors group"
+          >
+            Learn more
+            <ArrowRight class="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+          </a>
+        </Card>
+      ))}
+    </div>
+
+    <div class="mt-12 text-center">
+      <Button href="/coaching/" variant="primary" size="lg">
+        View All Programs
+      </Button>
+    </div>
+  </Container>
+</section>

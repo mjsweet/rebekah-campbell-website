@@ -1,0 +1,68 @@
+---
+import Container from '@components/ui/Container.astro';
+import Button from '@components/ui/Button.astro';
+import { TESTIMONIALS } from '@lib/constants';
+
+interface Props {
+  showTestimonials?: boolean;
+}
+
+const { showTestimonials = true } = Astro.props;
+---
+
+<section class="bg-white py-16 sm:py-20 lg:py-28">
+  <Container>
+    <div class="grid gap-12 items-center lg:grid-cols-2">
+      <!-- Book Image -->
+      <div class="relative flex justify-center lg:justify-start">
+        <img
+          src="/images/book/138Dates_Packshot-opt.png"
+          alt="138 Dates book cover"
+          class="w-64 sm:w-80 lg:w-96 drop-shadow-2xl"
+          loading="lazy"
+        />
+      </div>
+
+      <!-- Content -->
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-wider text-primary-600 mb-2">
+          The Book
+        </p>
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl lg:text-5xl">
+          138 Dates
+        </h2>
+        <p class="mt-2 text-xl text-neutral-900/70 font-display">
+          The True Story of One Woman's Search for Everything
+        </p>
+        <p class="mt-6 text-lg text-neutral-900/70">
+          At 34, after losing my first love to tragedy and spending a decade building my career, I decided it was time to find a life partner. I committed to one date a week for a year. I ended up going on 138.
+        </p>
+        <p class="mt-4 text-lg text-neutral-900/70">
+          This book weaves together the hilarious, heartbreaking, and ultimately hopeful story of that year, alongside the parallel journey of launching my tech startup and discovering what I really wanted from life.
+        </p>
+
+        {showTestimonials && TESTIMONIALS.book.length > 0 && (
+          <div class="mt-8 space-y-4">
+            {TESTIMONIALS.book.slice(0, 2).map((testimonial) => (
+              <blockquote class="border-l-4 border-primary-500 pl-4">
+                <p class="text-neutral-900/80 italic">"{testimonial.quote}"</p>
+                <p class="mt-1 text-sm text-neutral-900/60">
+                  <strong>{testimonial.author}</strong>, {testimonial.title}
+                </p>
+              </blockquote>
+            ))}
+          </div>
+        )}
+
+        <div class="mt-8 flex flex-wrap gap-4">
+          <Button href="/book/" variant="primary" size="lg">
+            Get Your Copy
+          </Button>
+          <Button href="/book/free-chapters/" variant="secondary" size="lg">
+            Download Free Chapters
+          </Button>
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>

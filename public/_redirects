@@ -1,0 +1,29 @@
+# Netlify redirects file
+# 301 redirects for URL changes
+
+/about-rebekah/  /about/  301
+/speaking-engagements/  /speaking/  301
+/138-dates/  /book/  301
+/coaching-programs/  /coaching/  301
+/coaching-programs/one-on-one-coaching-with-rebekah/  /coaching/one-on-one/  301
+/coaching-programs/find-your-life-partner-dating-and-relationships/  /coaching/dating/  301
+/coaching-programs/launch-and-scale-your-business/  /coaching/business/  301
+/coaching-programs/raise-capital-on-your-terms/  /coaching/capital-raising/  301
+/business-resources/  /resources/  301
+/airtasker-growth-marketing-course/  /courses/growth-marketing/  301
+/reboot-webinar-series/  /webinars/reboot/  301
+/love-in-lockdown-free-online-event-series/  /webinars/love-in-lockdown/  301
+/video-content/  /videos/  301
+/upcoming-events/  /events/  301
+/download-first-5-chapters/  /book/free-chapters/  301
+/download-photobook/  /book/photobook/  301
+/privacy-policy/  /privacy/  301
+/video-access-form/  /videos/access/  301
+
+# Blog post redirects
+/five-tips-to-finding-the-perfect-partner-online/  /articles/five-tips-finding-partner-online/  301
+/how-to-meet-the-perfect-husband-on-tinder-yes-its-possible/  /articles/meet-husband-tinder/  301
+/what-new-zealand-covid-quarantine-is-actually-like-why-its-better-and-worse-than-we-expected/  /articles/new-zealand-covid-quarantine/  301
+/how-to-network-when-you-dont-have-the-time-or-skills/  /articles/how-to-network/  301
+/why-working-from-home-is-counter-productive/  /articles/working-from-home-counterproductive/  301
+/a-marie-kondo-style-brain-declutter-could-make-you-more-productive/  /articles/brain-declutter-productivity/  301

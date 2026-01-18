@@ -1,0 +1,354 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import Container from '@components/ui/Container.astro';
+import Button from '@components/ui/Button.astro';
+import Testimonials from '@components/sections/Testimonials.astro';
+import CTA from '@components/sections/CTA.astro';
+import { TESTIMONIALS } from '@lib/constants';
+import { ExternalLink } from 'lucide-astro';
+---
+
+<PageLayout
+  title="138 Dates | The True Story of One Woman's Search for Everything"
+  description="A memoir about going on 138 dates to find love after tragedy, while simultaneously launching a tech startup. By Rebekah Campbell."
+  schema={{
+    type: 'Book',
+    data: {},
+  }}
+>
+  <!-- Hero Section -->
+  <section class="bg-white py-16 sm:py-20 lg:py-28">
+    <Container>
+      <div class="grid gap-12 items-center lg:grid-cols-2">
+        <!-- Book Image -->
+        <div class="flex justify-center lg:justify-start">
+          <img
+            src="/images/book/138Dates_Packshot-opt.png"
+            alt="138 Dates book cover"
+            class="w-64 sm:w-80 lg:w-96 drop-shadow-2xl"
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+
+        <!-- Content -->
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-wider text-primary-600 mb-2">
+            The Book
+          </p>
+          <h1 class="font-display text-4xl font-medium text-neutral-900 sm:text-5xl lg:text-6xl">
+            138 Dates
+          </h1>
+          <p class="mt-2 text-xl text-neutral-900/70 font-display sm:text-2xl">
+            The True Story of One Woman's Search for Everything
+          </p>
+          <p class="mt-6 text-lg text-neutral-900/70">
+            At 34, after a decade without dating following personal tragedy, I made a commitment that would change my life: one date a week for a year.
+          </p>
+          <p class="mt-4 text-lg text-neutral-900/70">
+            I ended up going on 138.
+          </p>
+          <p class="mt-4 text-lg text-neutral-900/70">
+            This is the honest, messy, sometimes hilarious, often heartbreaking story of that year. It's about searching for love while building a startup. About confronting the parts of yourself you've been avoiding. About discovering what you actually want from life.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <Button href="#purchase" variant="primary" size="lg">
+              Get Your Copy
+            </Button>
+            <Button href="/book/free-chapters/" variant="secondary" size="lg">
+              Download Free Chapters
+            </Button>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- The Story -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container narrow>
+      <div class="prose">
+        <h2>The Story Behind the Book</h2>
+        <p>
+          My first boyfriend died when I was young. The grief was overwhelming, and I dealt with it the only way I knew how: I threw myself into work.
+        </p>
+        <p>
+          For ten years, I built my career. I launched a music label that sold millions of records. I started a tech company and raised venture capital. I was successful by every external measure.
+        </p>
+        <p>
+          But at 34, I was also profoundly lonely.
+        </p>
+        <p>
+          I hadn't been on a single date in a decade. I was terrified that I'd missed my chance at love. That I'd wake up at 50, still alone, wondering what might have been.
+        </p>
+        <p>
+          So I made a decision. I would go on one date every week for a year. No excuses. No backing out. I would treat finding love with the same discipline I'd applied to building companies.
+        </p>
+        <p>
+          What followed was the most transformative year of my life.
+        </p>
+      </div>
+    </Container>
+  </section>
+
+  <!-- What This Book Is -->
+  <section class="bg-white py-16 sm:py-20">
+    <Container narrow>
+      <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl text-center mb-12">
+        What This Book Is (and Isn't)
+      </h2>
+      <div class="prose">
+        <p>
+          <strong>This is not a dating manual.</strong> I'm not going to give you 10 tips to land a husband or tell you which profile photo gets the most matches.
+        </p>
+        <p>
+          <strong>This is a true story</strong> presented in novel format. It weaves together:
+        </p>
+        <ul>
+          <li><strong>Tragedy and humour</strong> - Because life contains both, often at the same time</li>
+          <li><strong>Mistakes and growth</strong> - I made plenty of the former on my way to the latter</li>
+          <li><strong>Friendship and loneliness</strong> - The people who supported me through the hardest moments</li>
+          <li><strong>Business and love</strong> - Running a startup while searching for a partner</li>
+          <li><strong>A satisfying conclusion</strong> - Yes, I found him</li>
+        </ul>
+        <p>
+          Rather than documenting all 138 dates (that would be exhausting for both of us), this book offers an intimate character study. It explores perfectionism in relationships, the modern dating landscape, and what it really takes to open yourself up to love.
+        </p>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Who It's For -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container narrow>
+      <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl text-center mb-12">
+        Who This Book Is For
+      </h2>
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-3">If you're single and searching for love</h3>
+          <p class="text-neutral-900/70">
+            You'll recognise yourself in these pages. The late-night doubts. The bad dates. The moments of hope followed by disappointment. And hopefully, you'll find comfort in knowing you're not alone.
+          </p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-3">If you love compelling personal narratives</h3>
+          <p class="text-neutral-900/70">
+            This story delivers. It's been compared to Eat Pray Love and Wild for its raw honesty and emotional depth.
+          </p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-3">If you're curious about career and relationships</h3>
+          <p class="text-neutral-900/70">
+            This book explores what happens when an overachiever applies startup methodology to dating. (Spoiler: it's complicated.)
+          </p>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Testimonials -->
+  <Testimonials
+    eyebrow="Reviews"
+    title="What Readers Are Saying"
+    testimonials={TESTIMONIALS.book}
+  />
+
+  <!-- Reader Feedback -->
+  <section class="bg-white py-16 sm:py-20">
+    <Container narrow>
+      <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl text-center mb-12">
+        From Readers Like You
+      </h2>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {[
+          'I stayed up all night reading.',
+          'Unputdownable.',
+          'Open, honest and captivating.',
+          'I feel much less alone.',
+          'Could. Not. Put. This. Book. Down!',
+          'It challenged the way I think.',
+        ].map((quote) => (
+          <div class="bg-neutral-50 rounded-lg p-4 text-center">
+            <p class="text-neutral-900/80 italic">"{quote}"</p>
+          </div>
+        ))}
+      </div>
+    </Container>
+  </section>
+
+  <!-- Purchase Options -->
+  <section id="purchase" class="bg-neutral-50 py-16 sm:py-20">
+    <Container narrow>
+      <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl text-center mb-12">
+        Get Your Copy
+      </h2>
+
+      <div class="grid gap-8 md:grid-cols-3">
+        <!-- Australia -->
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-4">Australia</h3>
+          <ul class="space-y-3">
+            <li>
+              <a href="https://www.booktopia.com.au/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-primary-600 hover:text-primary-700">
+                Booktopia <ExternalLink class="h-4 w-4 ml-1" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.amazon.com.au/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-primary-600 hover:text-primary-700">
+                Amazon Australia <ExternalLink class="h-4 w-4 ml-1" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.bookdepository.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-primary-600 hover:text-primary-700">
+                Book Depository <ExternalLink class="h-4 w-4 ml-1" />
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- New Zealand -->
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-4">New Zealand</h3>
+          <ul class="space-y-3">
+            <li>
+              <a href="https://www.booksonline.co.nz/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-primary-600 hover:text-primary-700">
+                Books Online <ExternalLink class="h-4 w-4 ml-1" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.paperplus.co.nz/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-primary-600 hover:text-primary-700">
+                Paper Plus <ExternalLink class="h-4 w-4 ml-1" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.mightyape.co.nz/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-primary-600 hover:text-primary-700">
+                Mighty Ape <ExternalLink class="h-4 w-4 ml-1" />
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Digital -->
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-4">Digital Formats</h3>
+          <ul class="space-y-3">
+            <li>
+              <a href="https://www.amazon.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-primary-600 hover:text-primary-700">
+                Kindle Edition <ExternalLink class="h-4 w-4 ml-1" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.audible.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-primary-600 hover:text-primary-700">
+                Audiobook on Audible <ExternalLink class="h-4 w-4 ml-1" />
+              </a>
+              <p class="text-sm text-neutral-900/60 mt-1">Narrated by the author</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="mt-8 text-center text-neutral-900/60">
+        International orders: <a href="https://www.bookdepository.com/" target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-700">Book Depository</a> offers free worldwide shipping.
+      </p>
+    </Container>
+  </section>
+
+  <!-- Free Chapters -->
+  <section id="free-chapters" class="bg-white py-16 sm:py-20">
+    <Container narrow>
+      <div class="text-center">
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl mb-4">
+          Download Free Chapters
+        </h2>
+        <p class="text-lg text-neutral-900/70 mb-8 max-w-2xl mx-auto">
+          Not sure if this book is for you? Download the first five chapters free and see for yourself.
+        </p>
+
+        <div class="max-w-md mx-auto bg-neutral-50 rounded-xl p-8">
+          <p class="text-neutral-900/70 mb-6">You'll get:</p>
+          <ul class="text-left space-y-2 mb-6">
+            <li class="flex items-start gap-2">
+              <span class="text-primary-600">-</span>
+              <span class="text-neutral-900/70">The first five chapters of 138 Dates</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary-600">-</span>
+              <span class="text-neutral-900/70">A taste of the writing style and emotional depth</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary-600">-</span>
+              <span class="text-neutral-900/70">Enough story to know if you want more</span>
+            </li>
+          </ul>
+
+          <form action="#" method="POST" class="space-y-4">
+            <label for="free-chapters-email" class="sr-only">Email address</label>
+            <input
+              type="email"
+              id="free-chapters-email"
+              name="email"
+              placeholder="Enter your email"
+              required
+              class="w-full rounded-md border border-neutral-900/20 px-4 py-3 text-base text-neutral-900 placeholder-neutral-500 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 focus:outline-none"
+            />
+            <Button type="submit" variant="primary" size="lg" class="w-full">
+              Download Free Chapters
+            </Button>
+          </form>
+          <p class="mt-4 text-sm text-neutral-900/60">
+            No spam. Just the chapters and occasional updates about new work.
+          </p>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- About the Author -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container>
+      <div class="grid gap-12 items-center lg:grid-cols-2">
+        <div>
+          <img
+            src="/images/photos/rebekah-campbell-600x600.jpg"
+            alt="Rebekah Campbell"
+            class="w-64 h-64 rounded-full mx-auto lg:mx-0 object-cover shadow-lg"
+            loading="lazy"
+          />
+        </div>
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-wider text-primary-600 mb-2">
+            About the Author
+          </p>
+          <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl mb-6">
+            Rebekah Campbell
+          </h2>
+          <p class="text-lg text-neutral-900/70 mb-4">
+            Rebekah Campbell is an Australian entrepreneur, columnist, and coach. She founded Scorpio Music (one of Australia's largest independent music labels) and Hey You (Australia's largest mobile payments platform for cafes and restaurants, majority owned by Westpac).
+          </p>
+          <p class="text-lg text-neutral-900/70 mb-4">
+            She has raised over $17 million in venture capital, written for The New York Times and AFR BOSS Magazine, and was named a Woman of Influence in 2015.
+          </p>
+          <p class="text-lg text-neutral-900/70 mb-6">
+            138 Dates is her first book. She lives in Sydney with her husband Rod and their two children, Bobby and Eve.
+          </p>
+          <Button href="/about/" variant="secondary">
+            Learn More About Rebekah
+          </Button>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Related Program -->
+  <CTA
+    title="Want to Go Deeper?"
+    description="If 138 Dates resonates with you and you're serious about finding your person, consider joining the Find Your Life Partner coaching program."
+    primaryCta={{
+      text: 'Learn About the Program',
+      href: '/coaching/dating/',
+    }}
+    variant="dark"
+  />
+</PageLayout>

@@ -1,0 +1,135 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '@layouts/PageLayout.astro';
+import Container from '@components/ui/Container.astro';
+import Button from '@components/ui/Button.astro';
+import Badge from '@components/ui/Badge.astro';
+import NewsletterSignup from '@components/sections/NewsletterSignup.astro';
+import { ArrowLeft, Calendar, Clock } from 'lucide-astro';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles');
+  return articles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await article.render();
+
+function formatDate(date: Date): string {
+  return new Intl.DateTimeFormat('en-AU', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  }).format(date);
+}
+
+function getReadingTime(content: string): number {
+  const wordsPerMinute = 200;
+  const wordCount = content.split(/\s+/).length;
+  return Math.ceil(wordCount / wordsPerMinute);
+}
+---
+
+<PageLayout
+  title={`${article.data.title} | Rebekah Campbell`}
+  description={article.data.description}
+  image={article.data.image}
+  type="article"
+  publishedTime={article.data.publishDate}
+  modifiedTime={article.data.updatedDate}
+  schema={{
+    type: 'Article',
+    data: {
+      headline: article.data.title,
+      description: article.data.description,
+      datePublished: article.data.publishDate.toISOString(),
+      dateModified: article.data.updatedDate?.toISOString(),
+    },
+  }}
+>
+  <article>
+    <!-- Header -->
+    <section class="bg-white py-12 sm:py-16 border-b border-neutral-900/10">
+      <Container narrow>
+        <a
+          href="/articles/"
+          class="inline-flex items-center text-sm text-neutral-900/60 hover:text-primary-600 transition-colors mb-6"
+        >
+          <ArrowLeft class="h-4 w-4 mr-2" aria-hidden="true" />
+          Back to Articles
+        </a>
+
+        {article.data.tags && article.data.tags.length > 0 && (
+          <div class="flex gap-2 mb-4">
+            {article.data.tags.map((tag) => (
+              <Badge variant="secondary" size="sm">{tag}</Badge>
+            ))}
+          </div>
+        )}
+
+        <h1 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl lg:text-5xl">
+          {article.data.title}
+        </h1>
+
+        <p class="mt-4 text-lg text-neutral-900/70">
+          {article.data.description}
+        </p>
+
+        <div class="mt-6 flex flex-wrap items-center gap-4 text-sm text-neutral-900/60">
+          <span class="flex items-center gap-1">
+            <Calendar class="h-4 w-4" aria-hidden="true" />
+            {formatDate(article.data.publishDate)}
+          </span>
+          <span class="flex items-center gap-1">
+            <Clock class="h-4 w-4" aria-hidden="true" />
+            {getReadingTime(article.body)} min read
+          </span>
+          <span>By {article.data.author}</span>
+        </div>
+      </Container>
+    </section>
+
+    <!-- Content -->
+    <section class="bg-white py-12 sm:py-16">
+      <Container narrow>
+        <div class="prose max-w-none">
+          <Content />
+        </div>
+      </Container>
+    </section>
+
+    <!-- Author -->
+    <section class="bg-neutral-50 py-12 sm:py-16">
+      <Container narrow>
+        <div class="flex items-start gap-6">
+          <img
+            src="/images/photos/rebekah-campbell-600x600.jpg"
+            alt="Rebekah Campbell"
+            class="h-20 w-20 rounded-full object-cover"
+            loading="lazy"
+          />
+          <div>
+            <h3 class="font-display text-lg font-medium text-neutral-900">About the Author</h3>
+            <p class="mt-2 text-neutral-900/70">
+              Rebekah Campbell is an entrepreneur, author, and coach. She founded Scorpio Music and Hey You, raised $17M+ in venture capital, and wrote 138 Dates about her journey to find love.
+            </p>
+            <div class="mt-4">
+              <Button href="/about/" variant="secondary" size="sm">
+                Learn More
+              </Button>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </section>
+  </article>
+
+  <!-- Newsletter -->
+  <NewsletterSignup
+    title="Enjoyed This Article?"
+    description="Subscribe to receive weekly insights on entrepreneurship, relationships, and building a meaningful life."
+  />
+</PageLayout>

@@ -1,0 +1,55 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import ContactForm from '@components/sections/ContactForm.astro';
+import Container from '@components/ui/Container.astro';
+---
+
+<PageLayout
+  title="Contact | Rebekah Campbell"
+  description="Get in touch with Rebekah Campbell for coaching enquiries, speaking engagements, or media requests."
+>
+  <!-- Hero Section -->
+  <section class="bg-white py-16 sm:py-20">
+    <Container>
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display text-4xl font-medium text-neutral-900 sm:text-5xl">
+          Get in Touch
+        </h1>
+        <p class="mt-6 text-lg text-neutral-900/70">
+          Whether you're interested in coaching, speaking engagements, or media enquiries, I'd love to hear from you.
+        </p>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Contact Form Section -->
+  <ContactForm showContactInfo={true} />
+
+  <!-- FAQ Section -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container narrow>
+      <h2 class="font-display text-2xl font-medium text-neutral-900 sm:text-3xl text-center mb-12">
+        Common Questions
+      </h2>
+
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <h3 class="font-medium text-neutral-900 mb-2">How quickly will I hear back?</h3>
+          <p class="text-neutral-900/70">I aim to respond to all enquiries within 48 hours during business days.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <h3 class="font-medium text-neutral-900 mb-2">I'm interested in coaching. What's the first step?</h3>
+          <p class="text-neutral-900/70">Send me a message through this form describing your goals. I'll get back to you to schedule a free discovery call to discuss which program might be the best fit.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <h3 class="font-medium text-neutral-900 mb-2">How do I book you to speak at my event?</h3>
+          <p class="text-neutral-900/70">Fill out the contact form with details about your event including date, location, audience, and topic focus. I'll respond with availability and next steps.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <h3 class="font-medium text-neutral-900 mb-2">I'm a journalist. How can I request an interview?</h3>
+          <p class="text-neutral-900/70">Please visit the <a href="/media-kit/" class="text-primary-600 hover:text-primary-700">Media Kit</a> page for press resources and then get in touch through this form with your publication details and interview topic.</p>
+        </div>
+      </div>
+    </Container>
+  </section>
+</PageLayout>

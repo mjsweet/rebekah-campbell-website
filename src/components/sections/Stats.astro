@@ -1,0 +1,46 @@
+---
+import Container from '@components/ui/Container.astro';
+import { STATS } from '@lib/constants';
+
+interface Props {
+  stats?: typeof STATS;
+  variant?: 'light' | 'dark';
+}
+
+const {
+  stats = STATS,
+  variant = 'light',
+} = Astro.props;
+
+const variants = {
+  light: {
+    bg: 'bg-neutral-50',
+    value: 'text-primary-600',
+    label: 'text-neutral-900/70',
+  },
+  dark: {
+    bg: 'bg-neutral-900',
+    value: 'text-primary-400',
+    label: 'text-white/70',
+  },
+};
+
+const styles = variants[variant];
+---
+
+<section class:list={['py-12', styles.bg]}>
+  <Container>
+    <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+      {stats.map((stat) => (
+        <div class="text-center">
+          <p class:list={['font-display text-4xl font-medium sm:text-5xl', styles.value]}>
+            {stat.value}
+          </p>
+          <p class:list={['mt-1 text-sm', styles.label]}>
+            {stat.label}
+          </p>
+        </div>
+      ))}
+    </div>
+  </Container>
+</section>

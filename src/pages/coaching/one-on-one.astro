@@ -1,0 +1,184 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import Container from '@components/ui/Container.astro';
+import Button from '@components/ui/Button.astro';
+import CTA from '@components/sections/CTA.astro';
+import { User, Calendar, Target, MessageSquare } from 'lucide-astro';
+---
+
+<PageLayout
+  title="One-on-One Coaching | Rebekah Campbell"
+  description="Personalised coaching with Rebekah Campbell for founders and individuals seeking tailored guidance on dating, business, or capital raising."
+>
+  <!-- Hero Section -->
+  <section class="bg-white py-16 sm:py-20 lg:py-28">
+    <Container>
+      <div class="grid gap-12 items-center lg:grid-cols-2">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-wider text-primary-600 mb-2">
+            One-on-One Coaching
+          </p>
+          <h1 class="font-display text-4xl font-medium text-neutral-900 sm:text-5xl lg:text-6xl">
+            Personalised Guidance for Your Unique Journey
+          </h1>
+          <p class="mt-6 text-lg text-neutral-900/70">
+            For founders and individuals who want focused attention and strategies tailored specifically to their situation. Limited availability.
+          </p>
+          <div class="mt-8">
+            <Button href="#enquire" variant="primary" size="lg">
+              Enquire About Availability
+            </Button>
+          </div>
+        </div>
+        <div>
+          <img
+            src="/images/photos/rebekah-campbell-600x600.jpg"
+            alt="Rebekah Campbell"
+            class="w-full max-w-md mx-auto rounded-xl shadow-lg"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- What's Included -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container>
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl">
+          What One-on-One Coaching Includes
+        </h2>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div class="text-center">
+          <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary-100 text-primary-600">
+            <User class="h-7 w-7" aria-hidden="true" />
+          </div>
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-2">Dedicated Attention</h3>
+          <p class="text-neutral-900/70 text-sm">
+            Private sessions focused entirely on your specific challenges and goals.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary-100 text-primary-600">
+            <Calendar class="h-7 w-7" aria-hidden="true" />
+          </div>
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-2">Flexible Scheduling</h3>
+          <p class="text-neutral-900/70 text-sm">
+            Sessions scheduled around your availability, with ongoing support between calls.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary-100 text-primary-600">
+            <Target class="h-7 w-7" aria-hidden="true" />
+          </div>
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-2">Tailored Strategy</h3>
+          <p class="text-neutral-900/70 text-sm">
+            Customised action plans based on your unique situation and objectives.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary-100 text-primary-600">
+            <MessageSquare class="h-7 w-7" aria-hidden="true" />
+          </div>
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-2">Direct Access</h3>
+          <p class="text-neutral-900/70 text-sm">
+            Email and message support between sessions for questions as they arise.
+          </p>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Areas of Focus -->
+  <section class="bg-white py-16 sm:py-20">
+    <Container narrow>
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl">
+          Areas of Focus
+        </h2>
+        <p class="mt-4 text-lg text-neutral-900/70">
+          One-on-one coaching is available across the same areas as the group programs, with deeper personalisation.
+        </p>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-3">
+        <div class="bg-neutral-50 rounded-xl p-6 text-center">
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-2">Dating and Relationships</h3>
+          <p class="text-neutral-900/70 text-sm">
+            Personalised guidance on your dating journey, relationship patterns, and finding your person.
+          </p>
+        </div>
+        <div class="bg-neutral-50 rounded-xl p-6 text-center">
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-2">Business Strategy</h3>
+          <p class="text-neutral-900/70 text-sm">
+            Strategic advice for launching, growing, or pivoting your business based on your specific situation.
+          </p>
+        </div>
+        <div class="bg-neutral-50 rounded-xl p-6 text-center">
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-2">Capital Raising</h3>
+          <p class="text-neutral-900/70 text-sm">
+            Tailored fundraising strategy, pitch refinement, and investor introductions for your specific round.
+          </p>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Who It's For -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container narrow>
+      <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl text-center mb-12">
+        Who This Is For
+      </h2>
+      <div class="prose mx-auto">
+        <p>
+          One-on-one coaching works best for people who:
+        </p>
+        <ul>
+          <li>Have specific, complex challenges that benefit from personalised attention</li>
+          <li>Prefer private, confidential guidance over group settings</li>
+          <li>Need flexible scheduling that doesn't fit a structured program timeline</li>
+          <li>Want to accelerate their progress with dedicated support</li>
+          <li>Are ready to invest in themselves at a premium level</li>
+        </ul>
+        <p>
+          Due to limited availability, I only take on a small number of one-on-one clients at any time. Priority is given to those whose situations align well with my experience and expertise.
+        </p>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Enquire -->
+  <section id="enquire" class="bg-white py-16 sm:py-20">
+    <Container narrow>
+      <div class="text-center">
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl mb-4">
+          Interested in One-on-One Coaching?
+        </h2>
+        <p class="text-lg text-neutral-900/70 mb-8 max-w-2xl mx-auto">
+          Book a discovery call to discuss your goals and see if one-on-one coaching is the right fit for you.
+        </p>
+        <Button href="/contact/" variant="primary" size="lg">
+          Book a Discovery Call
+        </Button>
+        <p class="mt-4 text-sm text-neutral-900/60">
+          Discovery calls are complimentary and without obligation.
+        </p>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Alternative CTA -->
+  <CTA
+    title="Prefer a Group Program?"
+    description="Group programs offer community support and structured learning at a more accessible investment."
+    primaryCta={{
+      text: 'View All Programs',
+      href: '/coaching/',
+    }}
+    variant="default"
+  />
+</PageLayout>

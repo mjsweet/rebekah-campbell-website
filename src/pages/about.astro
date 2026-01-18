@@ -1,0 +1,354 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import Hero from '@components/sections/Hero.astro';
+import Container from '@components/ui/Container.astro';
+import Stats from '@components/sections/Stats.astro';
+import CTA from '@components/sections/CTA.astro';
+import Button from '@components/ui/Button.astro';
+---
+
+<PageLayout
+  title="About Rebekah Campbell | Entrepreneur, Author & Coach"
+  description="Serial entrepreneur who built Scorpio Music and Hey You, raised $17M+ in venture capital, NYT columnist, and author of 138 Dates. Woman of Influence 2015."
+  schema={{
+    type: 'Person',
+    data: {},
+  }}
+>
+  <!-- Hero Section -->
+  <Hero
+    eyebrow="About"
+    title="The Unexpected Path from Music Labels to Mobile Payments to Marriage"
+    description="I used to think success meant pushing harder than everyone else. Work longer hours. Break down more doors. Outwork your competition. I was wrong. After building two companies, raising over $17 million in venture capital, and going on 138 dates to find my husband, I've learned that success requires both effort and integrity."
+    image={{
+      src: '/images/photos/RebekahCampbell2.jpg',
+      alt: 'Rebekah Campbell portrait',
+    }}
+    primaryCta={{
+      text: 'Explore Coaching Programs',
+      href: '/coaching/',
+    }}
+    secondaryCta={{
+      text: 'Read 138 Dates',
+      href: '/book/',
+    }}
+  />
+
+  <!-- Origin Story -->
+  <section class="bg-white py-16 sm:py-20">
+    <Container narrow>
+      <div class="prose">
+        <h2>Where It All Started</h2>
+        <p>
+          At 20 years old, I organised a benefit concert in New Zealand featuring Neil Finn to raise awareness about youth suicide. The event drew 15,000 attendees and was broadcast on national television. It sparked a national conversation about youth mental health.
+        </p>
+        <p>
+          That experience taught me something important: one person with enough commitment can move mountains. It also planted the seeds for everything that came next.
+        </p>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Music Industry -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container>
+      <div class="grid gap-12 lg:grid-cols-2 items-center">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-wider text-primary-600 mb-2">
+            2002-2012
+          </p>
+          <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl mb-6">
+            Building a Music Empire
+          </h2>
+          <p class="text-lg text-neutral-900/70 mb-6">
+            At 24, with the support of musician John Woodruff, I founded what would become one of Australia's largest independent music labels.
+          </p>
+
+          <div class="grid grid-cols-2 gap-6 mb-8">
+            <div>
+              <p class="text-3xl font-display font-medium text-primary-600">2M+</p>
+              <p class="text-sm text-neutral-900/60">Records sold</p>
+            </div>
+            <div>
+              <p class="text-3xl font-display font-medium text-primary-600">3</p>
+              <p class="text-sm text-neutral-900/60">Global offices</p>
+            </div>
+          </div>
+
+          <p class="text-neutral-900/70">
+            <strong>Artists launched:</strong> Evermore, Matt Corby, Lisa Mitchell, Van She, and more. We pioneered online distribution and merchandise business models in Australia.
+          </p>
+        </div>
+        <div>
+          <img
+            src="/images/photos/rebekah-campbell-on-podium.jpg"
+            alt="Rebekah Campbell speaking at an event"
+            class="rounded-xl shadow-lg"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Tech Entrepreneurship -->
+  <section class="bg-white py-16 sm:py-20">
+    <Container>
+      <div class="grid gap-12 lg:grid-cols-2 items-center">
+        <div class="order-2 lg:order-1">
+          <img
+            src="/images/photos/heyyou.jpg"
+            alt="Hey You mobile app"
+            class="rounded-xl shadow-lg"
+            loading="lazy"
+          />
+        </div>
+        <div class="order-1 lg:order-2">
+          <p class="text-sm font-semibold uppercase tracking-wider text-primary-600 mb-2">
+            2010-Present
+          </p>
+          <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl mb-6">
+            From Music to Tech
+          </h2>
+
+          <h3 class="font-display text-xl font-medium text-neutral-900 mb-3">Posse.com (2010)</h3>
+          <p class="text-neutral-900/70 mb-6">
+            My first tech venture was an online platform rewarding users for sharing music and venue recommendations. We raised $1.5 million in venture capital and eventually pivoted to focus on cafe and restaurant recommendations.
+          </p>
+
+          <h3 class="font-display text-xl font-medium text-neutral-900 mb-3">Hey You (2014)</h3>
+          <p class="text-neutral-900/70 mb-4">
+            Hey You emerged from a merger between Posse and Beat The Q, and grew into Australia's largest mobile payments platform for cafes and restaurants.
+          </p>
+
+          <div class="grid grid-cols-2 gap-6">
+            <div>
+              <p class="text-3xl font-display font-medium text-primary-600">500K+</p>
+              <p class="text-sm text-neutral-900/60">Customers</p>
+            </div>
+            <div>
+              <p class="text-3xl font-display font-medium text-primary-600">100K+</p>
+              <p class="text-sm text-neutral-900/60">Weekly transactions</p>
+            </div>
+          </div>
+          <p class="mt-4 text-sm text-neutral-900/60">
+            Majority owned by Westpac Bank's Reinventure fund
+          </p>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Writing and Media -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container narrow>
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl">
+          Writing and Media
+        </h2>
+        <p class="mt-4 text-lg text-neutral-900/70">
+          What started as a personal blog about entrepreneurship grew into something unexpected.
+        </p>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-2">The New York Times</h3>
+          <p class="text-neutral-900/70">Fortnightly columnist on entrepreneurship and life</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-2">AFR BOSS Magazine</h3>
+          <p class="text-neutral-900/70">Monthly columnist on business and leadership</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-2">Forbes</h3>
+          <p class="text-neutral-900/70">Featured contributor</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-2">Smart Company</h3>
+          <p class="text-neutral-900/70">Best Business Blog (2013 and 2014)</p>
+        </div>
+      </div>
+
+      <p class="mt-8 text-center text-neutral-900/70">
+        I write about the things most founders are afraid to admit: the failures, the self-doubt, the moments when you wonder if you've made a terrible mistake.
+      </p>
+    </Container>
+  </section>
+
+  <!-- Awards -->
+  <section class="bg-white py-16 sm:py-20">
+    <Container narrow>
+      <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl text-center mb-12">
+        Awards and Recognition
+      </h2>
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div class="text-center p-6">
+          <p class="font-display text-xl font-medium text-primary-600 mb-2">Woman of Influence</p>
+          <p class="text-neutral-900/70">2015 - Recognised for contributions to Australian business</p>
+        </div>
+        <div class="text-center p-6">
+          <p class="font-display text-xl font-medium text-primary-600 mb-2">APEC Young Woman Innovator</p>
+          <p class="text-neutral-900/70">Honoured at the Asia-Pacific Economic Cooperation forum</p>
+        </div>
+        <div class="text-center p-6">
+          <p class="font-display text-xl font-medium text-primary-600 mb-2">TEDx Sydney Speaker</p>
+          <p class="text-neutral-900/70">Shared insights on entrepreneurship and personal development</p>
+        </div>
+        <div class="text-center p-6">
+          <p class="font-display text-xl font-medium text-primary-600 mb-2">City of Sydney "Reboot" Host</p>
+          <p class="text-neutral-900/70">Hosting virtual event series supporting 18,000+ business owners</p>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Personal Journey -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container narrow>
+      <div class="prose">
+        <h2>The Personal Journey</h2>
+        <p>
+          In 2012, I hadn't been on a date in ten years.
+        </p>
+        <p>
+          My first boyfriend died tragically when I was young, and I'd thrown myself into work ever since. At 34, I was running a successful startup, but I was also lonely and terrified that I'd missed my chance at love.
+        </p>
+        <p>
+          So I made a commitment: one date a week for a year.
+        </p>
+        <p>
+          I ended up going on 138 dates across Sydney, New York, and San Francisco. Along the way, I learned more about myself, relationships, and what actually matters than I had in the previous decade of my career.
+        </p>
+        <p>
+          I found my husband, Rod. We now have two children, Bobby and Eve.
+        </p>
+        <p>
+          That journey became my book, <strong>138 Dates: The True Story of One Woman's Search for Everything</strong>.
+        </p>
+      </div>
+      <div class="mt-8 flex justify-center">
+        <Button href="/book/" variant="primary" size="lg">
+          Learn About the Book
+        </Button>
+      </div>
+    </Container>
+  </section>
+
+  <!-- What I Believe -->
+  <section class="bg-white py-16 sm:py-20">
+    <Container narrow>
+      <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl text-center mb-12">
+        What I Believe
+      </h2>
+      <div class="prose">
+        <p>
+          <strong>Success requires both integrity and effort.</strong>
+        </p>
+        <p>
+          Integrity means knowing yourself. Understanding what you actually want, not what you think you should want. It means aligning your actions with your values, even when that's uncomfortable.
+        </p>
+        <p>
+          Effort means showing up consistently. Doing the work. Not giving up when things get hard.
+        </p>
+        <p>
+          Most people focus on one or the other. The magic happens when you combine both.
+        </p>
+        <p>
+          <strong>I've made significant mistakes.</strong>
+        </p>
+        <p>
+          Poor decisions. Leadership errors. Timing missteps. I've been too aggressive when I should have listened. Too cautious when I should have taken risks. Too focused on work when my personal life was falling apart.
+        </p>
+        <p>
+          I share these mistakes openly because they're the most valuable lessons I have to offer. Anyone can tell you what to do when everything goes right. I can tell you what to do when it all falls apart.
+        </p>
+      </div>
+    </Container>
+  </section>
+
+  <!-- What I Do Now -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container narrow>
+      <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl text-center mb-12">
+        What I Do Now
+      </h2>
+      <div class="grid gap-8 sm:grid-cols-2">
+        <div class="text-center">
+          <h3 class="font-display text-xl font-medium text-primary-600 mb-2">Writing</h3>
+          <p class="text-neutral-900/70">Continuing to share honest insights through my newsletter and columns</p>
+        </div>
+        <div class="text-center">
+          <h3 class="font-display text-xl font-medium text-primary-600 mb-2">Coaching</h3>
+          <p class="text-neutral-900/70">Running programs that help people find love, launch businesses, and raise capital</p>
+        </div>
+        <div class="text-center">
+          <h3 class="font-display text-xl font-medium text-primary-600 mb-2">Speaking</h3>
+          <p class="text-neutral-900/70">Keynoting at conferences and corporate events on entrepreneurship and leadership</p>
+        </div>
+        <div class="text-center">
+          <h3 class="font-display text-xl font-medium text-primary-600 mb-2">Family</h3>
+          <p class="text-neutral-900/70">Being present for Rod, Bobby, and Eve in a way I couldn't have imagined during my burnout years</p>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- At a Glance -->
+  <section class="bg-white py-16 sm:py-20">
+    <Container narrow>
+      <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl text-center mb-12">
+        At a Glance
+      </h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left">
+          <tbody class="divide-y divide-neutral-900/10">
+            <tr>
+              <td class="py-4 pr-4 font-medium text-neutral-900">Companies Founded</td>
+              <td class="py-4 text-neutral-900/70">3 (Scorpio Music, Posse.com, Hey You)</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4 font-medium text-neutral-900">Capital Raised</td>
+              <td class="py-4 text-neutral-900/70">$17M+ across ventures</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4 font-medium text-neutral-900">Records Sold</td>
+              <td class="py-4 text-neutral-900/70">2+ million</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4 font-medium text-neutral-900">Writing</td>
+              <td class="py-4 text-neutral-900/70">NYT, AFR BOSS, Forbes, Smart Company</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4 font-medium text-neutral-900">Awards</td>
+              <td class="py-4 text-neutral-900/70">Woman of Influence, APEC Young Innovator</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4 font-medium text-neutral-900">Book</td>
+              <td class="py-4 text-neutral-900/70">138 Dates (Allen and Unwin, 2021)</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4 font-medium text-neutral-900">Speaking</td>
+              <td class="py-4 text-neutral-900/70">TEDx Sydney, Business Chicks, Westpac, NAB, CBA, KPMG</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </Container>
+  </section>
+
+  <!-- CTA -->
+  <CTA
+    title="Work With Me"
+    description="If you're ready to transform your dating life, launch a business, or raise capital, I'd love to help."
+    primaryCta={{
+      text: 'Explore Coaching Programs',
+      href: '/coaching/',
+    }}
+    secondaryCta={{
+      text: 'Book Me to Speak',
+      href: '/speaking/',
+    }}
+    variant="dark"
+  />
+</PageLayout>

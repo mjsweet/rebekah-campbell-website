@@ -1,0 +1,110 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import Container from '@components/ui/Container.astro';
+import Button from '@components/ui/Button.astro';
+---
+
+<PageLayout
+  title="Download Free Chapters | 138 Dates by Rebekah Campbell"
+  description="Download the first five chapters of 138 Dates for free. A memoir about going on 138 dates to find love after tragedy."
+>
+  <section class="bg-white py-16 sm:py-20 lg:py-28">
+    <Container>
+      <div class="grid gap-12 items-center lg:grid-cols-2">
+        <!-- Book Image -->
+        <div class="flex justify-center">
+          <img
+            src="/images/book/138Dates_Packshot-opt.png"
+            alt="138 Dates book cover"
+            class="w-48 sm:w-64 drop-shadow-2xl"
+            loading="eager"
+          />
+        </div>
+
+        <!-- Form -->
+        <div>
+          <h1 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl lg:text-5xl mb-4">
+            Download the First Five Chapters Free
+          </h1>
+          <p class="text-lg text-neutral-900/70 mb-8">
+            Not sure if 138 Dates is for you? Get a taste of the writing style, emotional depth, and story before you commit.
+          </p>
+
+          <div class="bg-neutral-50 rounded-xl p-8">
+            <h2 class="font-display text-xl font-medium text-neutral-900 mb-4">
+              What You'll Get
+            </h2>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-3">
+                <span class="text-primary-600 font-medium">1.</span>
+                <span class="text-neutral-900/70">The first five chapters of 138 Dates delivered to your inbox</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-primary-600 font-medium">2.</span>
+                <span class="text-neutral-900/70">A glimpse into the journey that changed my life</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-primary-600 font-medium">3.</span>
+                <span class="text-neutral-900/70">Enough story to know if you want to continue</span>
+              </li>
+            </ul>
+
+            <form action="#" method="POST" class="space-y-4">
+              <div>
+                <label for="name" class="block text-sm font-medium text-neutral-900 mb-1">
+                  First name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your first name"
+                  required
+                  class="w-full rounded-md border border-neutral-900/20 px-4 py-3 text-base text-neutral-900 placeholder-neutral-500 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 focus:outline-none"
+                />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-neutral-900 mb-1">
+                  Email address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                  class="w-full rounded-md border border-neutral-900/20 px-4 py-3 text-base text-neutral-900 placeholder-neutral-500 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 focus:outline-none"
+                />
+              </div>
+              <Button type="submit" variant="primary" size="lg" class="w-full">
+                Send Me the Free Chapters
+              </Button>
+            </form>
+            <p class="mt-4 text-sm text-neutral-900/60 text-center">
+              No spam, ever. Just the chapters and occasional updates about new work.
+            </p>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- What Readers Say -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container narrow>
+      <h2 class="font-display text-2xl font-medium text-neutral-900 sm:text-3xl text-center mb-12">
+        What Readers Are Saying
+      </h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <blockquote class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <p class="text-neutral-900/80 italic mb-4">"This book will change lives. I couldn't put it down."</p>
+          <p class="text-sm text-neutral-900/60"><strong>Fleur Brown</strong>, TEDxSydney</p>
+        </blockquote>
+        <blockquote class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <p class="text-neutral-900/80 italic mb-4">"Absolutely incredible book. I loved it!"</p>
+          <p class="text-sm text-neutral-900/60"><strong>Melanie Perkins</strong>, Co-founder and CEO, Canva</p>
+        </blockquote>
+      </div>
+    </Container>
+  </section>
+</PageLayout>

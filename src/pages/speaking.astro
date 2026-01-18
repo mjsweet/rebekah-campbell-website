@@ -1,0 +1,200 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import Container from '@components/ui/Container.astro';
+import Button from '@components/ui/Button.astro';
+import Testimonials from '@components/sections/Testimonials.astro';
+import CTA from '@components/sections/CTA.astro';
+import { TESTIMONIALS } from '@lib/constants';
+import { Mic, Users, Lightbulb, Target } from 'lucide-astro';
+---
+
+<PageLayout
+  title="Speaking Engagements | Rebekah Campbell"
+  description="Book Rebekah Campbell for keynotes and speaking engagements on entrepreneurship, leadership, relationships, and building a life of purpose."
+>
+  <!-- Hero Section -->
+  <section class="bg-white py-16 sm:py-20 lg:py-28">
+    <Container>
+      <div class="grid gap-12 items-center lg:grid-cols-2">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-wider text-primary-600 mb-2">
+            Speaking
+          </p>
+          <h1 class="font-display text-4xl font-medium text-neutral-900 sm:text-5xl lg:text-6xl">
+            Inspiring Stories from the Front Lines
+          </h1>
+          <p class="mt-6 text-lg text-neutral-900/70">
+            Rebekah delivers keynotes that blend entrepreneurial insights with personal vulnerability. Her talks leave audiences inspired to take action in both their professional and personal lives.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <Button href="#enquire" variant="primary" size="lg">
+              Book Rebekah to Speak
+            </Button>
+            <Button href="/media-kit/" variant="secondary" size="lg">
+              Download Media Kit
+            </Button>
+          </div>
+        </div>
+        <div>
+          <img
+            src="/images/photos/rebekah-campbell-at-tedx.jpg"
+            alt="Rebekah Campbell speaking at TEDx"
+            class="w-full rounded-xl shadow-lg"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Speaking Topics -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container>
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl">
+          Speaking Topics
+        </h2>
+        <p class="mt-4 text-lg text-neutral-900/70">
+          Talks can be customised for your audience and event format.
+        </p>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-2">
+        <div class="bg-white rounded-xl p-8 shadow-sm border border-neutral-900/10">
+          <Lightbulb class="h-8 w-8 text-primary-600 mb-4" aria-hidden="true" />
+          <h3 class="font-display text-xl font-medium text-neutral-900 mb-3">Entrepreneurship and Innovation</h3>
+          <ul class="space-y-2 text-neutral-900/70">
+            <li>Building companies from zero to scale</li>
+            <li>Lessons from raising $17M+ in venture capital</li>
+            <li>Why big companies struggle to innovate</li>
+            <li>The reality of startup life (beyond the highlight reel)</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 shadow-sm border border-neutral-900/10">
+          <Target class="h-8 w-8 text-primary-600 mb-4" aria-hidden="true" />
+          <h3 class="font-display text-xl font-medium text-neutral-900 mb-3">Leadership and Resilience</h3>
+          <ul class="space-y-2 text-neutral-900/70">
+            <li>Leading through uncertainty and setback</li>
+            <li>Recovering from burnout and building sustainable success</li>
+            <li>Making hard decisions with incomplete information</li>
+            <li>Building teams and culture that last</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 shadow-sm border border-neutral-900/10">
+          <Users class="h-8 w-8 text-primary-600 mb-4" aria-hidden="true" />
+          <h3 class="font-display text-xl font-medium text-neutral-900 mb-3">Work-Life Integration</h3>
+          <ul class="space-y-2 text-neutral-900/70">
+            <li>The intersection of career ambition and personal fulfilment</li>
+            <li>What 138 dates taught me about knowing what you want</li>
+            <li>Designing a life, not just a career</li>
+            <li>Vulnerability as a leadership strength</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 shadow-sm border border-neutral-900/10">
+          <Mic class="h-8 w-8 text-primary-600 mb-4" aria-hidden="true" />
+          <h3 class="font-display text-xl font-medium text-neutral-900 mb-3">Women in Business</h3>
+          <ul class="space-y-2 text-neutral-900/70">
+            <li>Navigating male-dominated industries</li>
+            <li>Raising capital as a female founder</li>
+            <li>Building confidence and commanding presence</li>
+            <li>Creating opportunities through authenticity</li>
+          </ul>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Previous Speaking -->
+  <section class="bg-white py-16 sm:py-20">
+    <Container narrow>
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl">
+          Previous Speaking Engagements
+        </h2>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {[
+          'TEDx Sydney',
+          'Business Chicks',
+          'Speakers Institute',
+          'Westpac',
+          'NAB',
+          'CBA',
+          'KPMG',
+          'Google',
+          'Atlassian',
+          'G20 Young Entrepreneurs Alliance',
+          'City of Sydney Reboot Series',
+          'Various University Events',
+        ].map((event) => (
+          <div class="bg-neutral-50 rounded-lg px-4 py-3 text-center">
+            <p class="text-neutral-900">{event}</p>
+          </div>
+        ))}
+      </div>
+    </Container>
+  </section>
+
+  <!-- Testimonials -->
+  <Testimonials
+    eyebrow="Feedback"
+    title="What Event Organisers Say"
+    testimonials={TESTIMONIALS.speaking}
+  />
+
+  <!-- Formats -->
+  <section class="bg-white py-16 sm:py-20">
+    <Container narrow>
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl">
+          Speaking Formats
+        </h2>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-3">
+        <div class="text-center">
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-2">Keynote</h3>
+          <p class="text-neutral-900/70 text-sm">
+            30-60 minute keynote presentations for conferences and corporate events.
+          </p>
+        </div>
+        <div class="text-center">
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-2">Panel</h3>
+          <p class="text-neutral-900/70 text-sm">
+            Participation in panel discussions on entrepreneurship, leadership, or relationships.
+          </p>
+        </div>
+        <div class="text-center">
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-2">Workshop</h3>
+          <p class="text-neutral-900/70 text-sm">
+            Interactive half-day or full-day workshops for teams and organisations.
+          </p>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Enquire -->
+  <section id="enquire" class="bg-neutral-50 py-16 sm:py-20">
+    <Container narrow>
+      <div class="text-center">
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl mb-4">
+          Book Rebekah for Your Event
+        </h2>
+        <p class="text-lg text-neutral-900/70 mb-8 max-w-2xl mx-auto">
+          Tell us about your event and we'll get back to you within 48 hours to discuss availability and fit.
+        </p>
+        <Button href="/contact/" variant="primary" size="lg">
+          Enquire About Speaking
+        </Button>
+        <p class="mt-6 text-sm text-neutral-900/60">
+          For media enquiries, please visit the <a href="/media-kit/" class="text-primary-600 hover:text-primary-700">Media Kit</a> page.
+        </p>
+      </div>
+    </Container>
+  </section>
+</PageLayout>

@@ -1,0 +1,131 @@
+---
+import { SITE } from '@lib/constants';
+
+interface Props {
+  type: 'Person' | 'Organization' | 'WebSite' | 'Article' | 'Book' | 'Course' | 'BreadcrumbList';
+  data?: Record<string, unknown>;
+}
+
+const { type, data = {} } = Astro.props;
+
+// Base schemas for common types
+const schemas: Record<string, Record<string, unknown>> = {
+  Person: {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Rebekah Campbell',
+    url: SITE.url,
+    image: `${SITE.url}/images/photos/rebekah-campbell.jpg`,
+    jobTitle: 'Entrepreneur, Author & Coach',
+    description: 'Serial entrepreneur who founded Scorpio Music and Hey You, raised $17M+ in venture capital, and author of 138 Dates.',
+    sameAs: [
+      SITE.social.linkedin,
+      SITE.social.twitter,
+      SITE.social.instagram,
+    ],
+    knowsAbout: [
+      'Entrepreneurship',
+      'Startup Fundraising',
+      'Business Strategy',
+      'Dating Coaching',
+      'Leadership',
+    ],
+    alumniOf: {
+      '@type': 'Organization',
+      name: 'University of Auckland',
+    },
+    award: [
+      'Woman of Influence 2015',
+      'APEC Young Woman Innovator',
+    ],
+    ...data,
+  },
+  Organization: {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Rebekah Campbell',
+    url: SITE.url,
+    logo: `${SITE.url}/images/logos/rebekah-campbell-logo.svg`,
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: SITE.email,
+      contactType: 'customer service',
+    },
+    sameAs: [
+      SITE.social.linkedin,
+      SITE.social.twitter,
+      SITE.social.instagram,
+    ],
+    ...data,
+  },
+  WebSite: {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE.name,
+    url: SITE.url,
+    description: SITE.description,
+    publisher: {
+      '@type': 'Person',
+      name: 'Rebekah Campbell',
+    },
+    ...data,
+  },
+  Article: {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    author: {
+      '@type': 'Person',
+      name: 'Rebekah Campbell',
+      url: SITE.url,
+    },
+    publisher: {
+      '@type': 'Person',
+      name: 'Rebekah Campbell',
+      url: SITE.url,
+    },
+    ...data,
+  },
+  Book: {
+    '@context': 'https://schema.org',
+    '@type': 'Book',
+    name: '138 Dates: The True Story of One Woman\'s Search for Everything',
+    author: {
+      '@type': 'Person',
+      name: 'Rebekah Campbell',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Allen & Unwin',
+    },
+    datePublished: '2021',
+    isbn: '',
+    bookFormat: 'Paperback',
+    numberOfPages: 320,
+    inLanguage: 'en',
+    genre: ['Memoir', 'Self-Help', 'Dating'],
+    description: 'A memoir about going on 138 dates to find love after tragedy, while simultaneously launching a tech startup.',
+    image: `${SITE.url}/images/book/138Dates_Packshot-opt.png`,
+    url: `${SITE.url}/book/`,
+    ...data,
+  },
+  Course: {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    provider: {
+      '@type': 'Person',
+      name: 'Rebekah Campbell',
+      url: SITE.url,
+    },
+    ...data,
+  },
+  BreadcrumbList: {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    ...data,
+  },
+};
+
+const schema = schemas[type] || { '@context': 'https://schema.org', '@type': type, ...data };
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

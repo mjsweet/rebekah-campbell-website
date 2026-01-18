@@ -1,0 +1,181 @@
+---
+import { NAV_ITEMS, SITE } from '@lib/constants';
+import { Menu, X, ChevronDown } from 'lucide-astro';
+---
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-neutral-900/10">
+  <nav class="container" aria-label="Primary navigation">
+    <div class="flex h-20 items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center" aria-label="Rebekah Campbell - Home">
+        <img
+          src="/images/logos/rebekah-campbell-logo.svg"
+          alt="Rebekah Campbell"
+          class="h-10 w-auto"
+          width="180"
+          height="40"
+        />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden lg:flex lg:items-center lg:gap-8">
+        {NAV_ITEMS.map((item) => (
+          item.children ? (
+            <div class="relative group">
+              <button
+                type="button"
+                class="flex items-center gap-1 py-2 text-sm font-medium text-neutral-900/80 hover:text-primary-600 transition-colors"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                {item.label}
+                <ChevronDown class="h-4 w-4" aria-hidden="true" />
+              </button>
+              <div class="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div class="w-48 rounded-lg bg-white p-2 shadow-lg ring-1 ring-neutral-900/10">
+                  {item.children.map((child) => (
+                    <a
+                      href={child.href}
+                      class="block rounded-md px-3 py-2 text-sm text-neutral-900/80 hover:bg-primary-50 hover:text-primary-600 transition-colors"
+                    >
+                      {child.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <a
+              href={item.href}
+              class="py-2 text-sm font-medium text-neutral-900/80 hover:text-primary-600 transition-colors"
+            >
+              {item.label}
+            </a>
+          )
+        ))}
+      </div>
+
+      <!-- CTA Button (Desktop) -->
+      <div class="hidden lg:block">
+        <a
+          href="/coaching/"
+          class="btn btn-primary text-sm"
+        >
+          Start Coaching
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        type="button"
+        class="lg:hidden p-2 text-neutral-900"
+        aria-label="Open menu"
+        aria-expanded="false"
+        data-mobile-menu-toggle
+      >
+        <Menu class="h-6 w-6" aria-hidden="true" />
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div
+    class="fixed inset-0 z-50 hidden"
+    role="dialog"
+    aria-modal="true"
+    data-mobile-menu
+  >
+    <!-- Backdrop -->
+    <div class="fixed inset-0 bg-neutral-900/50" data-mobile-menu-backdrop></div>
+
+    <!-- Panel -->
+    <div class="fixed inset-y-0 right-0 w-full max-w-sm bg-white p-6 shadow-xl">
+      <div class="flex items-center justify-between mb-8">
+        <a href="/" class="flex items-center" aria-label="Rebekah Campbell - Home">
+          <img
+            src="/images/logos/rebekah-campbell-logo.svg"
+            alt="Rebekah Campbell"
+            class="h-8 w-auto"
+            width="144"
+            height="32"
+          />
+        </a>
+        <button
+          type="button"
+          class="p-2 text-neutral-900"
+          aria-label="Close menu"
+          data-mobile-menu-close
+        >
+          <X class="h-6 w-6" aria-hidden="true" />
+        </button>
+      </div>
+
+      <nav class="space-y-1">
+        {NAV_ITEMS.map((item) => (
+          item.children ? (
+            <div class="border-b border-neutral-900/10 pb-4 mb-4">
+              <span class="block px-3 py-2 text-sm font-semibold text-neutral-900">
+                {item.label}
+              </span>
+              <div class="pl-4 space-y-1">
+                {item.children.map((child) => (
+                  <a
+                    href={child.href}
+                    class="block px-3 py-2 text-sm text-neutral-900/80 hover:text-primary-600 transition-colors"
+                  >
+                    {child.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <a
+              href={item.href}
+              class="block px-3 py-2 text-base font-medium text-neutral-900/80 hover:text-primary-600 transition-colors"
+            >
+              {item.label}
+            </a>
+          )
+        ))}
+      </nav>
+
+      <div class="mt-8 pt-8 border-t border-neutral-900/10">
+        <a
+          href="/coaching/"
+          class="btn btn-primary w-full"
+        >
+          Start Coaching
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu functionality
+  const menuToggle = document.querySelector('[data-mobile-menu-toggle]');
+  const menuClose = document.querySelector('[data-mobile-menu-close]');
+  const menuBackdrop = document.querySelector('[data-mobile-menu-backdrop]');
+  const mobileMenu = document.querySelector('[data-mobile-menu]');
+
+  function openMenu() {
+    mobileMenu?.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    menuToggle?.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeMenu() {
+    mobileMenu?.classList.add('hidden');
+    document.body.style.overflow = '';
+    menuToggle?.setAttribute('aria-expanded', 'false');
+  }
+
+  menuToggle?.addEventListener('click', openMenu);
+  menuClose?.addEventListener('click', closeMenu);
+  menuBackdrop?.addEventListener('click', closeMenu);
+
+  // Close on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
+</script>

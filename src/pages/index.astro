@@ -1,0 +1,112 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import Hero from '@components/sections/Hero.astro';
+import MediaLogos from '@components/sections/MediaLogos.astro';
+import BookFeature from '@components/sections/BookFeature.astro';
+import CoachingPrograms from '@components/sections/CoachingPrograms.astro';
+import Testimonials from '@components/sections/Testimonials.astro';
+import NewsletterSignup from '@components/sections/NewsletterSignup.astro';
+import Stats from '@components/sections/Stats.astro';
+import CTA from '@components/sections/CTA.astro';
+import Container from '@components/ui/Container.astro';
+import { TESTIMONIALS } from '@lib/constants';
+
+const speakingTestimonials = TESTIMONIALS.speaking;
+---
+
+<PageLayout
+  title="Rebekah Campbell | Entrepreneur, Author & Coach"
+  description="Entrepreneur who built two successful companies, raised $17M+ in venture capital, and went on 138 dates to find love. Coaching programs for dating, business, and capital raising."
+>
+  <!-- Hero Section -->
+  <Hero
+    subtitle="From Heartbreak to Happiness. From Startup to Scale."
+    title="I've Built Companies, Raised Millions, and Found Love After 138 Dates. Now I Help Others Do the Same."
+    description="After a decade without dating following personal tragedy, I committed to one date a week for a year. After launching two companies and raising over $17 million in venture capital, I learned what actually works. I share these hard-won lessons through my book, my newsletter, and my coaching programs."
+    image={{
+      src: '/images/photos/rebekah-campbell.jpg',
+      alt: 'Rebekah Campbell - Entrepreneur, Author and Coach',
+    }}
+    primaryCta={{
+      text: 'Explore Coaching Programs',
+      href: '/coaching/',
+    }}
+    secondaryCta={{
+      text: 'Read My Story',
+      href: '/about/',
+    }}
+  />
+
+  <!-- Media Logos -->
+  <MediaLogos title="Trusted by Founders and Featured In" />
+
+  <!-- Stats -->
+  <Stats />
+
+  <!-- Value Proposition Section -->
+  <section class="bg-white py-16 sm:py-20 lg:py-28">
+    <Container>
+      <div class="max-w-3xl mx-auto">
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl lg:text-5xl text-center mb-6">
+          Real Experience. Real Results.
+        </h2>
+        <p class="text-lg text-neutral-900/70 text-center mb-12">
+          Most advice comes from people who've read about success. Mine comes from living it.
+        </p>
+
+        <div class="prose mx-auto">
+          <p>
+            I've stood on stage at sold-out concerts for artists I discovered. I've sat across the table from venture capitalists who wrote million-dollar cheques. I've swiped through dating apps at 2am wondering if love was even possible at 34. And I've navigated the messy, uncertain path from each of those moments to something better.
+          </p>
+
+          <h3>What makes my approach different:</h3>
+          <ul>
+            <li>
+              <strong>Lived experience, not theory.</strong> I've raised $17M+ across my ventures, sold over 2 million records, and yes, went on 138 actual dates.
+            </li>
+            <li>
+              <strong>Battle-tested frameworks.</strong> Everything I teach comes from what worked (and what spectacularly failed) in my own journey.
+            </li>
+            <li>
+              <strong>Honest vulnerability.</strong> I share the mistakes, the setbacks, and the unglamorous middle bits that most people hide.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Book Feature -->
+  <BookFeature />
+
+  <!-- Coaching Programs -->
+  <CoachingPrograms />
+
+  <!-- Newsletter Signup -->
+  <NewsletterSignup
+    title="Join the Newsletter"
+    description="Every week, I share stories and strategies from the front lines of entrepreneurship and relationships. No fluff, no guru nonsense. Just real lessons from real experience."
+  />
+
+  <!-- Testimonials -->
+  <Testimonials
+    eyebrow="What Others Say"
+    title="Trusted by Leaders and Founders"
+    testimonials={speakingTestimonials}
+  />
+
+  <!-- Final CTA -->
+  <CTA
+    title="Ready to Take the Next Step?"
+    description="Whether you're searching for love, building a business, or raising capital, I'd love to help you get there faster with fewer costly mistakes."
+    primaryCta={{
+      text: 'Book a Free Discovery Call',
+      href: '/contact/',
+    }}
+    secondaryCta={{
+      text: 'Explore Programs',
+      href: '/coaching/',
+    }}
+    variant="dark"
+  />
+</PageLayout>

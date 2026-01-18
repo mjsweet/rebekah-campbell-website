@@ -1,0 +1,7 @@
+# Robots.txt for rebekahcampbell.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://rebekahcampbell.com/sitemap.xml

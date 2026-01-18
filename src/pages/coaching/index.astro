@@ -1,0 +1,174 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import Hero from '@components/sections/Hero.astro';
+import Container from '@components/ui/Container.astro';
+import Card from '@components/ui/Card.astro';
+import Badge from '@components/ui/Badge.astro';
+import Button from '@components/ui/Button.astro';
+import Testimonials from '@components/sections/Testimonials.astro';
+import CTA from '@components/sections/CTA.astro';
+import { COACHING_PROGRAMS, TESTIMONIALS } from '@lib/constants';
+import { Clock, ArrowRight, Users, Video, MessageSquare, Award } from 'lucide-astro';
+---
+
+<PageLayout
+  title="Coaching Programs | Rebekah Campbell"
+  description="Transform your dating life, launch your business, or raise capital with coaching programs led by serial entrepreneur Rebekah Campbell."
+>
+  <!-- Hero Section -->
+  <Hero
+    eyebrow="Coaching Programs"
+    title="Three Paths to Transformation"
+    description="Whatever you're working towards, I've been there. Choose the journey that fits your goals. Every program is built on lived experience, not theory."
+    centered
+    primaryCta={{
+      text: 'View All Programs',
+      href: '#programs',
+    }}
+  />
+
+  <!-- Why Learn From Me -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container>
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl">
+          Why Learn From Me?
+        </h2>
+        <p class="mt-4 text-lg text-neutral-900/70">
+          I'm not a coach who studied success. I'm an entrepreneur who figured it out through trial, error, and occasional disaster.
+        </p>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div class="text-center">
+          <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 text-primary-600">
+            <Award class="h-6 w-6" aria-hidden="true" />
+          </div>
+          <p class="text-2xl font-display font-medium text-primary-600">$17M+</p>
+          <p class="text-sm text-neutral-900/60">Capital raised</p>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 text-primary-600">
+            <Users class="h-6 w-6" aria-hidden="true" />
+          </div>
+          <p class="text-2xl font-display font-medium text-primary-600">138</p>
+          <p class="text-sm text-neutral-900/60">Dates to find love</p>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 text-primary-600">
+            <Video class="h-6 w-6" aria-hidden="true" />
+          </div>
+          <p class="text-2xl font-display font-medium text-primary-600">2M+</p>
+          <p class="text-sm text-neutral-900/60">Records sold</p>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 text-primary-600">
+            <MessageSquare class="h-6 w-6" aria-hidden="true" />
+          </div>
+          <p class="text-2xl font-display font-medium text-primary-600">500K+</p>
+          <p class="text-sm text-neutral-900/60">Hey You customers</p>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Programs -->
+  <section id="programs" class="bg-white py-16 sm:py-20 lg:py-28">
+    <Container>
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl">
+          Choose Your Path
+        </h2>
+      </div>
+
+      <div class="grid gap-8 lg:grid-cols-3">
+        {COACHING_PROGRAMS.map((program) => (
+          <Card padding="lg" hover class="flex flex-col">
+            <Badge variant="primary" size="sm" class="mb-4 self-start">
+              <Clock class="h-3 w-3 mr-1" aria-hidden="true" />
+              {program.duration}
+            </Badge>
+            <h3 class="font-display text-2xl font-medium text-neutral-900 mb-3">
+              {program.title}
+            </h3>
+            <p class="text-neutral-900/70 mb-6 flex-1">
+              {program.description}
+            </p>
+            <Button href={program.href} variant="primary" class="w-full">
+              Learn More
+            </Button>
+          </Card>
+        ))}
+      </div>
+    </Container>
+  </section>
+
+  <!-- What's Included -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container narrow>
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl">
+          What Every Program Includes
+        </h2>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <Video class="h-8 w-8 text-primary-600 mb-4" aria-hidden="true" />
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-2">Video Content</h3>
+          <p class="text-neutral-900/70">Weekly video lessons with practical insights and real-world examples from my journey.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <MessageSquare class="h-8 w-8 text-primary-600 mb-4" aria-hidden="true" />
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-2">Live Sessions</h3>
+          <p class="text-neutral-900/70">Interactive webinars with Q&A where you can bring your specific challenges.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <Users class="h-8 w-8 text-primary-600 mb-4" aria-hidden="true" />
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-2">Community</h3>
+          <p class="text-neutral-900/70">A private group of peers on the same journey, providing support and accountability.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <Award class="h-8 w-8 text-primary-600 mb-4" aria-hidden="true" />
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-2">Lifetime Access</h3>
+          <p class="text-neutral-900/70">Keep access to all materials and community connections long after the program ends.</p>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Testimonials -->
+  <Testimonials
+    eyebrow="Success Stories"
+    title="What Participants Say"
+    testimonials={TESTIMONIALS.coaching}
+  />
+
+  <!-- One-on-One -->
+  <section class="bg-white py-16 sm:py-20">
+    <Container>
+      <div class="bg-neutral-900 rounded-2xl p-8 sm:p-12 lg:p-16 text-center">
+        <h2 class="font-display text-3xl font-medium text-white sm:text-4xl mb-4">
+          Prefer One-on-One Guidance?
+        </h2>
+        <p class="text-lg text-white/80 max-w-2xl mx-auto mb-8">
+          For founders and individuals who want personalised attention and tailored strategies, I offer limited one-on-one coaching engagements.
+        </p>
+        <Button href="/coaching/one-on-one/" variant="primary" size="lg">
+          Learn About One-on-One Coaching
+        </Button>
+      </div>
+    </Container>
+  </section>
+
+  <!-- CTA -->
+  <CTA
+    title="Not Sure Which Program Is Right for You?"
+    description="Book a free discovery call to discuss your goals and find the best fit."
+    primaryCta={{
+      text: 'Book a Discovery Call',
+      href: '/contact/',
+    }}
+    variant="default"
+  />
+</PageLayout>

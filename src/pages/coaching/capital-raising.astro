@@ -1,0 +1,324 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import Container from '@components/ui/Container.astro';
+import Button from '@components/ui/Button.astro';
+import Badge from '@components/ui/Badge.astro';
+import CTA from '@components/sections/CTA.astro';
+import { Clock, Target, Users, MessageSquare, DollarSign, FileText, Handshake, TrendingUp } from 'lucide-astro';
+---
+
+<PageLayout
+  title="Raise Capital on Your Terms | Capital Raising Program"
+  description="A 12-week intensive for Australian and NZ founders ready to raise seed or Series A funding. Learn from someone who's raised $17M+ in venture capital."
+  schema={{
+    type: 'Course',
+    data: {
+      name: 'Raise Capital on Your Terms',
+      description: 'A 12-week intensive for Australian and NZ founders ready to raise seed or Series A funding.',
+    },
+  }}
+>
+  <!-- Hero Section -->
+  <section class="bg-white py-16 sm:py-20 lg:py-28">
+    <Container>
+      <div class="max-w-3xl mx-auto text-center">
+        <Badge variant="primary" size="md" class="mb-4">
+          <Clock class="h-4 w-4 mr-1" aria-hidden="true" />
+          12-Week Intensive
+        </Badge>
+        <h1 class="font-display text-4xl font-medium text-neutral-900 sm:text-5xl lg:text-6xl">
+          Raise Capital on Your Terms
+        </h1>
+        <p class="mt-4 text-xl text-neutral-900/70 font-display">
+          A Program for Founders Ready to Raise Seed or Series A
+        </p>
+        <p class="mt-6 text-lg text-neutral-900/70">
+          Raising capital is one of the most challenging things a founder can do. I've raised over $17 million across my ventures. I've pitched hundreds of investors. This program shares everything I learned.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <Button href="#apply" variant="primary" size="lg">
+            Apply Now
+          </Button>
+          <Button href="#guide" variant="secondary" size="lg">
+            Download Program Guide
+          </Button>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Credibility -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container narrow>
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl">
+          My Fundraising Track Record
+        </h2>
+        <p class="mt-4 text-lg text-neutral-900/70">
+          I'm not a consultant who teaches fundraising theory. I'm a founder who's done it. Repeatedly.
+        </p>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div class="bg-white rounded-xl p-6 text-center shadow-sm border border-neutral-900/10">
+          <p class="text-3xl font-display font-medium text-primary-600">$1.5M</p>
+          <p class="text-neutral-900/60">Raised for Posse.com</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 text-center shadow-sm border border-neutral-900/10">
+          <p class="text-3xl font-display font-medium text-primary-600">$15M+</p>
+          <p class="text-neutral-900/60">Raised for Hey You across multiple rounds</p>
+        </div>
+      </div>
+
+      <div class="mt-8 bg-white rounded-xl p-8 shadow-sm border border-neutral-900/10">
+        <h3 class="font-medium text-neutral-900 mb-4">I've also made every mistake possible:</h3>
+        <ul class="space-y-2 text-neutral-900/70">
+          <li>- Pitched the wrong investors for my stage</li>
+          <li>- Accepted terms I later regretted</li>
+          <li>- Lost momentum by not understanding the process</li>
+          <li>- Nearly ran out of runway while fundraising</li>
+        </ul>
+        <p class="mt-4 text-primary-600 font-medium">This program helps you avoid those mistakes.</p>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Curriculum -->
+  <section class="bg-white py-16 sm:py-20">
+    <Container>
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl">
+          Core Curriculum
+        </h2>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div class="bg-neutral-50 rounded-xl p-6">
+          <Target class="h-8 w-8 text-primary-600 mb-4" aria-hidden="true" />
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-3">Investor Identification and Targeting</h3>
+          <ul class="space-y-2 text-neutral-900/70 text-sm">
+            <li>Building your investor shortlist</li>
+            <li>Understanding investor preferences and portfolio fit</li>
+            <li>Warm introduction strategies</li>
+            <li>Cold outreach that actually works</li>
+          </ul>
+        </div>
+
+        <div class="bg-neutral-50 rounded-xl p-6">
+          <DollarSign class="h-8 w-8 text-primary-600 mb-4" aria-hidden="true" />
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-3">Company Valuation</h3>
+          <ul class="space-y-2 text-neutral-900/70 text-sm">
+            <li>Understanding how early-stage companies are valued</li>
+            <li>Negotiating from a position of knowledge</li>
+            <li>Avoiding common valuation mistakes</li>
+            <li>Setting realistic expectations</li>
+          </ul>
+        </div>
+
+        <div class="bg-neutral-50 rounded-xl p-6">
+          <MessageSquare class="h-8 w-8 text-primary-600 mb-4" aria-hidden="true" />
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-3">Pitch Positioning and Refinement</h3>
+          <ul class="space-y-2 text-neutral-900/70 text-sm">
+            <li>Crafting a narrative that resonates</li>
+            <li>The elements every investor pitch needs</li>
+            <li>Addressing objections before they're raised</li>
+            <li>Deck design and presentation skills</li>
+          </ul>
+        </div>
+
+        <div class="bg-neutral-50 rounded-xl p-6">
+          <TrendingUp class="h-8 w-8 text-primary-600 mb-4" aria-hidden="true" />
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-3">Deal Momentum</h3>
+          <ul class="space-y-2 text-neutral-900/70 text-sm">
+            <li>Creating urgency without desperation</li>
+            <li>Managing multiple conversations simultaneously</li>
+            <li>The psychology of investor decision-making</li>
+            <li>Closing when you have the advantage</li>
+          </ul>
+        </div>
+
+        <div class="bg-neutral-50 rounded-xl p-6">
+          <FileText class="h-8 w-8 text-primary-600 mb-4" aria-hidden="true" />
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-3">Terms and Negotiation</h3>
+          <ul class="space-y-2 text-neutral-900/70 text-sm">
+            <li>Understanding term sheets</li>
+            <li>What's negotiable (and what isn't)</li>
+            <li>Protecting your interests</li>
+            <li>Common traps and how to avoid them</li>
+          </ul>
+        </div>
+
+        <div class="bg-neutral-50 rounded-xl p-6">
+          <Handshake class="h-8 w-8 text-primary-600 mb-4" aria-hidden="true" />
+          <h3 class="font-display text-lg font-medium text-neutral-900 mb-3">After the Close</h3>
+          <ul class="space-y-2 text-neutral-900/70 text-sm">
+            <li>Managing investor relationships</li>
+            <li>Board dynamics</li>
+            <li>Setting yourself up for the next round</li>
+          </ul>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- The Pitch Opportunity -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container narrow>
+      <div class="bg-primary-500 rounded-2xl p-8 sm:p-12 text-center text-white">
+        <h2 class="font-display text-3xl font-medium sm:text-4xl mb-4">
+          The Pitch Opportunity
+        </h2>
+        <p class="text-lg text-white/90 mb-6">
+          Present your deal to active investors who are genuinely looking for opportunities.
+        </p>
+        <ul class="text-left max-w-md mx-auto space-y-3 text-white/90">
+          <li class="flex items-start gap-3">
+            <span class="text-white">-</span>
+            <span>Real feedback from people who write cheques</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white">-</span>
+            <span>Potential to secure meetings and investment</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white">-</span>
+            <span>Practice in a supportive environment first</span>
+          </li>
+        </ul>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Eligibility -->
+  <section class="bg-white py-16 sm:py-20">
+    <Container narrow>
+      <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl text-center mb-12">
+        Program Eligibility
+      </h2>
+      <div class="bg-neutral-50 rounded-xl p-8">
+        <p class="text-neutral-900 font-medium mb-4">This program is specifically for:</p>
+        <ul class="space-y-3 text-neutral-900/70">
+          <li class="flex items-start gap-3">
+            <span class="text-primary-600">-</span>
+            <span><strong>Australian and New Zealand founders</strong> (due to regulatory and market specifics)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-primary-600">-</span>
+            <span><strong>Companies raising Seed or Series A</strong> (up to $5M rounds)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-primary-600">-</span>
+            <span><strong>Founders with existing traction</strong> (some revenue, users, or validated concept)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-primary-600">-</span>
+            <span><strong>Serious founders</strong> ready to commit 12 weeks to this process</span>
+          </li>
+        </ul>
+        <p class="mt-6 text-sm text-neutral-900/60">
+          Application required. We review each application to ensure fit and that the program can genuinely help you.
+        </p>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container narrow>
+      <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl text-center mb-12">
+        What Past Participants Say
+      </h2>
+      <div class="space-y-6">
+        <blockquote class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <p class="text-lg text-neutral-900/80 italic mb-4">"Rebekah was open and honest with her experiences in raising capital. This gave us real life examples, ones which can be easily applied to the process ourselves."</p>
+          <p class="text-neutral-900/60"><strong>Iman Davamoni</strong>, Founder and CEO, Purely Polished</p>
+        </blockquote>
+        <blockquote class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <p class="text-lg text-neutral-900/80 italic mb-4">"I loved the straight to the point advice, terms and jargon they use in real life...and the fact that we got to meet and ask questions to a real angel investor directly."</p>
+          <p class="text-neutral-900/60"><strong>Chris Kosasih</strong>, Financial Planning and Analysis Manager, BPay</p>
+        </blockquote>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Program Details -->
+  <section class="bg-white py-16 sm:py-20">
+    <Container narrow>
+      <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl text-center mb-12">
+        Program Details
+      </h2>
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div class="bg-neutral-50 rounded-xl p-6">
+          <p class="text-sm text-neutral-900/60 uppercase tracking-wider mb-1">Duration</p>
+          <p class="text-lg font-medium text-neutral-900">12 weeks</p>
+        </div>
+        <div class="bg-neutral-50 rounded-xl p-6">
+          <p class="text-sm text-neutral-900/60 uppercase tracking-wider mb-1">Format</p>
+          <p class="text-lg font-medium text-neutral-900">Online (Australia/NZ)</p>
+        </div>
+        <div class="bg-neutral-50 rounded-xl p-6">
+          <p class="text-sm text-neutral-900/60 uppercase tracking-wider mb-1">Time Commitment</p>
+          <p class="text-lg font-medium text-neutral-900">4-5 hours per week</p>
+        </div>
+        <div class="bg-neutral-50 rounded-xl p-6">
+          <p class="text-sm text-neutral-900/60 uppercase tracking-wider mb-1">Eligibility</p>
+          <p class="text-lg font-medium text-neutral-900">Seed or Series A (up to $5M)</p>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container narrow>
+      <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl text-center mb-12">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <h3 class="font-medium text-neutral-900 mb-2">Why is this only for Australian and NZ founders?</h3>
+          <p class="text-neutral-900/70">Fundraising dynamics vary significantly by market. Investor expectations, legal frameworks, and market conventions in Australia and NZ are different from the US or Europe. This program is specifically designed for our ecosystem.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <h3 class="font-medium text-neutral-900 mb-2">What stage should my company be at?</h3>
+          <p class="text-neutral-900/70">You should have some traction, whether that's early revenue, active users, or strong validation of your concept. If you're pre-idea or very early, start with the Launch and Scale program first.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <h3 class="font-medium text-neutral-900 mb-2">Will I definitely raise capital after this program?</h3>
+          <p class="text-neutral-900/70">We can't guarantee outcomes. What we can guarantee is that you'll be significantly better prepared and have real opportunities to connect with investors. Many participants have successfully raised after the program.</p>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Apply -->
+  <section id="apply" class="bg-white py-16 sm:py-20">
+    <Container narrow>
+      <div class="text-center">
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl mb-4">
+          Ready to Raise on Your Terms?
+        </h2>
+        <p class="text-lg text-neutral-900/70 mb-8 max-w-2xl mx-auto">
+          Stop navigating the fundraising process blind. Learn from someone who's done it successfully.
+        </p>
+        <Button href="/contact/" variant="primary" size="lg">
+          Apply for the Next Cohort
+        </Button>
+        <p class="mt-4 text-sm text-neutral-900/60">
+          Applications are required and reviewed to ensure fit. You'll hear back within 48 hours.
+        </p>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Alternative CTA -->
+  <CTA
+    title="Not Ready to Raise Yet?"
+    description="If you're still building your business and not ready for external capital, check out the Launch and Scale Your Business program."
+    primaryCta={{
+      text: 'Learn About the Business Program',
+      href: '/coaching/business/',
+    }}
+    variant="dark"
+  />
+</PageLayout>

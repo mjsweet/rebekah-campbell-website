@@ -1,0 +1,327 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import Container from '@components/ui/Container.astro';
+import Button from '@components/ui/Button.astro';
+import Badge from '@components/ui/Badge.astro';
+import CTA from '@components/sections/CTA.astro';
+import { Clock, Video, Users, MessageSquare, Heart, Target, Shield, Sparkles } from 'lucide-astro';
+---
+
+<PageLayout
+  title="Find Your Life Partner | Dating Coaching Program"
+  description="A 12-week coaching program for women serious about finding lasting love. Learn from someone who went on 138 dates to find her husband."
+  schema={{
+    type: 'Course',
+    data: {
+      name: 'Find Your Life Partner',
+      description: 'A 12-week coaching program for women serious about finding lasting love.',
+    },
+  }}
+>
+  <!-- Hero Section -->
+  <section class="bg-white py-16 sm:py-20 lg:py-28">
+    <Container>
+      <div class="max-w-3xl mx-auto text-center">
+        <Badge variant="primary" size="md" class="mb-4">
+          <Clock class="h-4 w-4 mr-1" aria-hidden="true" />
+          12-Week Program
+        </Badge>
+        <h1 class="font-display text-4xl font-medium text-neutral-900 sm:text-5xl lg:text-6xl">
+          Find Your Life Partner
+        </h1>
+        <p class="mt-4 text-xl text-neutral-900/70 font-display">
+          A Program for Women Ready to Stop Settling and Start Finding
+        </p>
+        <p class="mt-6 text-lg text-neutral-900/70">
+          You've built a career. You've got your life together. But when it comes to relationships, something isn't clicking. I've been exactly where you are. At 34, I hadn't dated in a decade. So I committed to one date a week for a year. I went on 138 dates. And I found my husband.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <Button href="#apply" variant="primary" size="lg">
+            Apply Now
+          </Button>
+          <Button href="#guide" variant="secondary" size="lg">
+            Download Program Guide
+          </Button>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- The Problem -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container narrow>
+      <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl text-center mb-8">
+        The Real Reason You Haven't Found Your Person Yet
+      </h2>
+      <div class="prose mx-auto">
+        <p>
+          It's not because you're too picky. It's not because all the good ones are taken. It's not because you're "too much" or "not enough."
+        </p>
+        <p>
+          The truth is that modern dating is genuinely hard. The apps have changed everything. The rules your parents followed don't apply anymore. And most dating advice is written by people who've never actually had to navigate today's landscape.
+        </p>
+        <p><strong>Common challenges I hear:</strong></p>
+        <ul>
+          <li>"I keep attracting emotionally unavailable partners"</li>
+          <li>"I don't know how to be myself on dates"</li>
+          <li>"I'm exhausted by the endless cycle of matching and ghosting"</li>
+          <li>"I've been hurt before and I'm scared to be vulnerable again"</li>
+          <li>"I have high standards and I'm not willing to settle, but I'm starting to wonder if I'm being unrealistic"</li>
+        </ul>
+        <p>If any of this sounds familiar, you're in the right place.</p>
+      </div>
+    </Container>
+  </section>
+
+  <!-- What Makes This Different -->
+  <section class="bg-white py-16 sm:py-20">
+    <Container>
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl">
+          What Makes This Program Different
+        </h2>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-3">
+        <div class="text-center">
+          <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary-100 text-primary-600">
+            <Heart class="h-7 w-7" aria-hidden="true" />
+          </div>
+          <h3 class="font-display text-xl font-medium text-neutral-900 mb-3">Lived Experience</h3>
+          <p class="text-neutral-900/70">
+            This isn't a course taught by someone who read about dating in a textbook. It's a program designed by someone who went through it herself. All 138 dates of it.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary-100 text-primary-600">
+            <Users class="h-7 w-7" aria-hidden="true" />
+          </div>
+          <h3 class="font-display text-xl font-medium text-neutral-900 mb-3">Supportive Community</h3>
+          <p class="text-neutral-900/70">
+            There's something powerful about being in community with others who understand exactly what you're going through. You'll form friendships that last well beyond the 12 weeks.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary-100 text-primary-600">
+            <Video class="h-7 w-7" aria-hidden="true" />
+          </div>
+          <h3 class="font-display text-xl font-medium text-neutral-900 mb-3">Real Story Interviews</h3>
+          <p class="text-neutral-900/70">
+            Each week includes video interviews with real characters from 138 Dates, sharing their perspectives on what happened and what they learned.
+          </p>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- What's Included -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container>
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl">
+          What's Included
+        </h2>
+      </div>
+
+      <div class="grid gap-8 lg:grid-cols-2">
+        <div class="bg-white rounded-xl p-8 shadow-sm border border-neutral-900/10">
+          <Video class="h-8 w-8 text-primary-600 mb-4" aria-hidden="true" />
+          <h3 class="font-display text-xl font-medium text-neutral-900 mb-3">Weekly Video Content</h3>
+          <ul class="space-y-2 text-neutral-900/70">
+            <li><strong>Character interviews:</strong> Hear directly from people who were part of my 138-date journey</li>
+            <li><strong>Expert interviews:</strong> Relationship therapists, dating coaches, and researchers share evidence-based insights</li>
+            <li><strong>My personal reflections:</strong> What I wish I'd known, the mistakes I made, and what finally worked</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 shadow-sm border border-neutral-900/10">
+          <MessageSquare class="h-8 w-8 text-primary-600 mb-4" aria-hidden="true" />
+          <h3 class="font-display text-xl font-medium text-neutral-900 mb-3">Live Webinars</h3>
+          <ul class="space-y-2 text-neutral-900/70">
+            <li><strong>Weekly live sessions</strong> with interactive Q&A</li>
+            <li><strong>Real-time coaching</strong> on your specific situations</li>
+            <li><strong>Community discussions</strong> where you can share and learn from others</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 shadow-sm border border-neutral-900/10">
+          <Target class="h-8 w-8 text-primary-600 mb-4" aria-hidden="true" />
+          <h3 class="font-display text-xl font-medium text-neutral-900 mb-3">The 8-Date Challenge (Optional)</h3>
+          <ul class="space-y-2 text-neutral-900/70">
+            <li>A structured approach to dating during the program</li>
+            <li>Accountability and support from the group</li>
+            <li>Real-time application of what you're learning</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 shadow-sm border border-neutral-900/10">
+          <Users class="h-8 w-8 text-primary-600 mb-4" aria-hidden="true" />
+          <h3 class="font-display text-xl font-medium text-neutral-900 mb-3">Community Access</h3>
+          <ul class="space-y-2 text-neutral-900/70">
+            <li><strong>Private group</strong> of women on the same journey</li>
+            <li><strong>Peer support</strong> between sessions</li>
+            <li><strong>Lasting connections</strong> that extend beyond the program</li>
+          </ul>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Outcomes -->
+  <section class="bg-white py-16 sm:py-20">
+    <Container narrow>
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl">
+          What You'll Walk Away With
+        </h2>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div class="flex gap-4">
+          <div class="flex-shrink-0">
+            <Sparkles class="h-6 w-6 text-primary-600" aria-hidden="true" />
+          </div>
+          <div>
+            <h3 class="font-medium text-neutral-900 mb-1">Clarity on what you actually want</h3>
+            <p class="text-neutral-900/70">Not what you think you should want. Not what your family wants for you. What you genuinely desire in a partner and a relationship.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0">
+            <Shield class="h-6 w-6 text-primary-600" aria-hidden="true" />
+          </div>
+          <div>
+            <h3 class="font-medium text-neutral-900 mb-1">Confidence in yourself</h3>
+            <p class="text-neutral-900/70">The kind of self-assurance that comes from truly knowing who you are and what you bring to a relationship.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0">
+            <Target class="h-6 w-6 text-primary-600" aria-hidden="true" />
+          </div>
+          <div>
+            <h3 class="font-medium text-neutral-900 mb-1">Skills for modern dating</h3>
+            <p class="text-neutral-900/70">Practical approaches for online profiles, first dates, navigating the early stages, and building genuine connection.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0">
+            <Heart class="h-6 w-6 text-primary-600" aria-hidden="true" />
+          </div>
+          <div>
+            <h3 class="font-medium text-neutral-900 mb-1">Resilience for the journey</h3>
+            <p class="text-neutral-900/70">Dating is hard. You'll develop the emotional tools to handle rejection, disappointment, and uncertainty without giving up.</p>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container narrow>
+      <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl text-center mb-12">
+        What Past Participants Say
+      </h2>
+      <div class="space-y-6">
+        <blockquote class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <p class="text-lg text-neutral-900/80 italic mb-4">"The course was full of insights no one could possibly tell you, because no one else has done this to the same degree as the instructor."</p>
+          <p class="text-neutral-900/60"><strong>Program Participant</strong></p>
+        </blockquote>
+        <blockquote class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <p class="text-lg text-neutral-900/80 italic mb-4">"I finally understand why my past relationships didn't work. More importantly, I know what to look for now."</p>
+          <p class="text-neutral-900/60"><strong>Program Graduate</strong></p>
+        </blockquote>
+        <blockquote class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <p class="text-lg text-neutral-900/80 italic mb-4">"The community aspect was unexpected but incredible. I made friends who are still supporting me months later."</p>
+          <p class="text-neutral-900/60"><strong>Recent Participant</strong></p>
+        </blockquote>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Program Details -->
+  <section class="bg-white py-16 sm:py-20">
+    <Container narrow>
+      <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl text-center mb-12">
+        Program Details
+      </h2>
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div class="bg-neutral-50 rounded-xl p-6">
+          <p class="text-sm text-neutral-900/60 uppercase tracking-wider mb-1">Duration</p>
+          <p class="text-lg font-medium text-neutral-900">12 weeks</p>
+        </div>
+        <div class="bg-neutral-50 rounded-xl p-6">
+          <p class="text-sm text-neutral-900/60 uppercase tracking-wider mb-1">Format</p>
+          <p class="text-lg font-medium text-neutral-900">Online (participate from anywhere)</p>
+        </div>
+        <div class="bg-neutral-50 rounded-xl p-6">
+          <p class="text-sm text-neutral-900/60 uppercase tracking-wider mb-1">Time Commitment</p>
+          <p class="text-lg font-medium text-neutral-900">2-3 hours per week</p>
+        </div>
+        <div class="bg-neutral-50 rounded-xl p-6">
+          <p class="text-sm text-neutral-900/60 uppercase tracking-wider mb-1">Access</p>
+          <p class="text-lg font-medium text-neutral-900">Lifetime access to materials</p>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container narrow>
+      <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl text-center mb-12">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <h3 class="font-medium text-neutral-900 mb-2">I'm in my 40s/50s. Is this program still relevant for me?</h3>
+          <p class="text-neutral-900/70">Absolutely. The principles of authentic connection don't change with age. Many of our participants are in their 40s and 50s, and they find the content just as relevant.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <h3 class="font-medium text-neutral-900 mb-2">What if I'm not comfortable with online dating?</h3>
+          <p class="text-neutral-900/70">That's completely fine. While we discuss online dating as one tool, the program covers all approaches to meeting potential partners. Many women meet their person through other channels.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <h3 class="font-medium text-neutral-900 mb-2">Is there one-on-one coaching included?</h3>
+          <p class="text-neutral-900/70">This program is primarily group-based, which creates a powerful community dynamic. One-on-one coaching with Rebekah is available separately for those who want personalised guidance.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <h3 class="font-medium text-neutral-900 mb-2">How is this different from reading the book?</h3>
+          <p class="text-neutral-900/70">The book tells my story. This program teaches you how to write your own. It includes structured exercises, community support, expert insights, and ongoing guidance that go far beyond what a book can offer.</p>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Apply -->
+  <section id="apply" class="bg-white py-16 sm:py-20">
+    <Container narrow>
+      <div class="text-center">
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl mb-4">
+          Ready to Find Your Person?
+        </h2>
+        <p class="text-lg text-neutral-900/70 mb-8 max-w-2xl mx-auto">
+          You've spent years building your career and your life. Now it's time to invest in finding someone to share it with.
+        </p>
+        <Button href="/contact/" variant="primary" size="lg">
+          Apply for the Next Cohort
+        </Button>
+        <p class="mt-4 text-sm text-neutral-900/60">
+          Applications are reviewed to ensure fit. You'll hear back within 48 hours.
+        </p>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Alternative CTA -->
+  <CTA
+    title="Not Ready to Commit?"
+    description="Start with the book. If 138 Dates resonates with you, you'll know this program is right."
+    primaryCta={{
+      text: 'Get the Book',
+      href: '/book/',
+    }}
+    variant="default"
+  />
+</PageLayout>

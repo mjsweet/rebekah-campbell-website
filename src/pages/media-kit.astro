@@ -1,0 +1,214 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import Container from '@components/ui/Container.astro';
+import Button from '@components/ui/Button.astro';
+import { Download, Camera, FileText, Quote } from 'lucide-astro';
+---
+
+<PageLayout
+  title="Media Kit | Rebekah Campbell"
+  description="Press and media resources for Rebekah Campbell including bio, headshots, logos, and interview topics."
+>
+  <!-- Hero Section -->
+  <section class="bg-white py-16 sm:py-20">
+    <Container>
+      <div class="max-w-3xl mx-auto text-center">
+        <p class="text-sm font-semibold uppercase tracking-wider text-primary-600 mb-2">
+          Media Kit
+        </p>
+        <h1 class="font-display text-4xl font-medium text-neutral-900 sm:text-5xl">
+          Press and Media Resources
+        </h1>
+        <p class="mt-6 text-lg text-neutral-900/70">
+          Everything you need for press coverage, interviews, and media features.
+        </p>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Bio Section -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container>
+      <div class="grid gap-12 lg:grid-cols-3">
+        <div class="lg:col-span-2">
+          <h2 class="font-display text-2xl font-medium text-neutral-900 sm:text-3xl mb-6">
+            Biography
+          </h2>
+
+          <div class="space-y-6">
+            <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+              <h3 class="font-medium text-neutral-900 mb-3">Short Bio (50 words)</h3>
+              <p class="text-neutral-900/70">
+                Rebekah Campbell is an Australian entrepreneur, author, and coach. She founded Scorpio Music and Hey You, raised $17M+ in venture capital, and wrote 138 Dates after going on 138 dates to find her husband. She helps people find love, build businesses, and raise capital.
+              </p>
+            </div>
+
+            <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+              <h3 class="font-medium text-neutral-900 mb-3">Medium Bio (100 words)</h3>
+              <p class="text-neutral-900/70">
+                Rebekah Campbell is an Australian entrepreneur, author, and coach who has built companies across music, technology, and consumer products. At 24, she founded Scorpio Music, launching artists including Evermore and Matt Corby, and selling over 2 million records. She later co-founded Hey You, Australia's largest mobile payments platform for hospitality, majority owned by Westpac. After going on 138 dates following a decade without dating, she wrote her memoir 138 Dates and now coaches people on finding love, building businesses, and raising capital. Her work has appeared in The New York Times and AFR BOSS.
+              </p>
+            </div>
+
+            <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+              <h3 class="font-medium text-neutral-900 mb-3">Full Bio</h3>
+              <div class="text-neutral-900/70 space-y-4">
+                <p>
+                  Rebekah Campbell is a serial entrepreneur, author, columnist, and coach based in Sydney, Australia. Her career spans the music industry, technology startups, and personal development coaching.
+                </p>
+                <p>
+                  At 24, Rebekah founded Scorpio Music, which grew into one of Australia's largest independent music labels. The label launched artists including Evermore, Matt Corby, Lisa Mitchell, and Van She, selling over 2 million records with offices in Sydney, New York, and London.
+                </p>
+                <p>
+                  Transitioning to technology, Rebekah co-founded Hey You, which became Australia's largest mobile payments platform for cafes and restaurants. The company grew to serve 500,000+ customers with 100,000+ weekly transactions and is now majority owned by Westpac Bank's Reinventure fund. Across her ventures, she has raised over $17 million in venture capital.
+                </p>
+                <p>
+                  In 2012, after a decade without dating following personal tragedy, Rebekah committed to going on one date per week for a year. She ended up going on 138 dates before meeting her husband Rod. That journey became her memoir, 138 Dates: The True Story of One Woman's Search for Everything, published by Allen and Unwin.
+                </p>
+                <p>
+                  Rebekah writes fortnightly for The New York Times and monthly for AFR BOSS Magazine. She was named a Woman of Influence in 2015 and an APEC Young Woman Innovator. She has spoken at TEDx Sydney, Business Chicks, Google, Atlassian, and major corporations including the big four banks.
+                </p>
+                <p>
+                  Today, Rebekah runs coaching programs helping people find love, launch businesses, and raise capital. She lives in Sydney with her husband Rod and their two children, Bobby and Eve.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl font-medium text-neutral-900 sm:text-3xl mb-6">
+            Quick Facts
+          </h2>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10 space-y-4">
+            <div>
+              <p class="text-sm text-neutral-900/60 uppercase tracking-wider">Location</p>
+              <p class="text-neutral-900">Sydney, Australia</p>
+            </div>
+            <div>
+              <p class="text-sm text-neutral-900/60 uppercase tracking-wider">Companies Founded</p>
+              <p class="text-neutral-900">Scorpio Music, Hey You</p>
+            </div>
+            <div>
+              <p class="text-sm text-neutral-900/60 uppercase tracking-wider">Capital Raised</p>
+              <p class="text-neutral-900">$17M+</p>
+            </div>
+            <div>
+              <p class="text-sm text-neutral-900/60 uppercase tracking-wider">Book</p>
+              <p class="text-neutral-900">138 Dates (Allen and Unwin, 2021)</p>
+            </div>
+            <div>
+              <p class="text-sm text-neutral-900/60 uppercase tracking-wider">Writing</p>
+              <p class="text-neutral-900">NYT, AFR BOSS, Forbes</p>
+            </div>
+            <div>
+              <p class="text-sm text-neutral-900/60 uppercase tracking-wider">Awards</p>
+              <p class="text-neutral-900">Woman of Influence 2015, APEC Young Innovator</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Photos -->
+  <section class="bg-white py-16 sm:py-20">
+    <Container>
+      <div class="flex items-center gap-3 mb-8">
+        <Camera class="h-6 w-6 text-primary-600" aria-hidden="true" />
+        <h2 class="font-display text-2xl font-medium text-neutral-900 sm:text-3xl">
+          Headshots and Photos
+        </h2>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <img
+            src="/images/photos/rebekah-campbell-600x600.jpg"
+            alt="Rebekah Campbell headshot"
+            class="w-full aspect-square object-cover rounded-xl shadow-sm"
+            loading="lazy"
+          />
+          <p class="mt-2 text-sm text-neutral-900/60 text-center">Headshot (Square)</p>
+        </div>
+        <div>
+          <img
+            src="/images/photos/RebekahCampbell2.jpg"
+            alt="Rebekah Campbell portrait"
+            class="w-full aspect-square object-cover rounded-xl shadow-sm"
+            loading="lazy"
+          />
+          <p class="mt-2 text-sm text-neutral-900/60 text-center">Portrait</p>
+        </div>
+        <div>
+          <img
+            src="/images/photos/rebekah-campbell-at-tedx.jpg"
+            alt="Rebekah Campbell speaking at TEDx"
+            class="w-full aspect-square object-cover rounded-xl shadow-sm"
+            loading="lazy"
+          />
+          <p class="mt-2 text-sm text-neutral-900/60 text-center">Speaking</p>
+        </div>
+        <div>
+          <img
+            src="/images/book/138Dates_Packshot-opt.png"
+            alt="138 Dates book cover"
+            class="w-full aspect-square object-contain rounded-xl shadow-sm bg-neutral-50"
+            loading="lazy"
+          />
+          <p class="mt-2 text-sm text-neutral-900/60 text-center">Book Cover</p>
+        </div>
+      </div>
+
+      <p class="mt-6 text-neutral-900/60 text-sm">
+        High-resolution versions available upon request. Please credit "Photo: Rebekah Campbell" when used.
+      </p>
+    </Container>
+  </section>
+
+  <!-- Interview Topics -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container narrow>
+      <div class="flex items-center gap-3 mb-8">
+        <Quote class="h-6 w-6 text-primary-600" aria-hidden="true" />
+        <h2 class="font-display text-2xl font-medium text-neutral-900 sm:text-3xl">
+          Interview Topics
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        {[
+          'The 138 dates journey: finding love after tragedy and a decade without dating',
+          'Building companies in Australia: from music labels to tech startups',
+          'Raising venture capital as a female founder',
+          'The reality of startup life beyond the highlight reel',
+          'Recovering from burnout and building sustainable success',
+          'Applying entrepreneurial thinking to personal relationships',
+          'Writing for The New York Times and building a media presence',
+          'Coaching programs for dating, business, and capital raising',
+        ].map((topic) => (
+          <div class="bg-white rounded-lg px-4 py-3 shadow-sm border border-neutral-900/10">
+            <p class="text-neutral-900">{topic}</p>
+          </div>
+        ))}
+      </div>
+    </Container>
+  </section>
+
+  <!-- Contact -->
+  <section class="bg-white py-16 sm:py-20">
+    <Container narrow>
+      <div class="text-center">
+        <h2 class="font-display text-2xl font-medium text-neutral-900 sm:text-3xl mb-4">
+          Media Enquiries
+        </h2>
+        <p class="text-lg text-neutral-900/70 mb-8">
+          For press, podcast, or media enquiries, please get in touch.
+        </p>
+        <Button href="/contact/" variant="primary" size="lg">
+          Contact for Media Enquiries
+        </Button>
+      </div>
+    </Container>
+  </section>
+</PageLayout>

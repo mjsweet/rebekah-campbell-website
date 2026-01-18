@@ -1,0 +1,30 @@
+---
+interface Props {
+  variant?: 'primary' | 'secondary' | 'outline';
+  size?: 'sm' | 'md';
+  class?: string;
+}
+
+const {
+  variant = 'primary',
+  size = 'sm',
+  class: className = '',
+} = Astro.props;
+
+const variants = {
+  primary: 'bg-primary-100 text-primary-700',
+  secondary: 'bg-neutral-100 text-neutral-700',
+  outline: 'bg-transparent border border-current text-primary-600',
+};
+
+const sizes = {
+  sm: 'px-2 py-0.5 text-xs',
+  md: 'px-3 py-1 text-sm',
+};
+
+const classes = ['inline-flex items-center font-medium rounded-full', variants[variant], sizes[size], className].join(' ');
+---
+
+<span class={classes}>
+  <slot />
+</span>

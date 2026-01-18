@@ -1,0 +1,77 @@
+---
+import Container from '@components/ui/Container.astro';
+import Button from '@components/ui/Button.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  primaryCta: {
+    text: string;
+    href: string;
+  };
+  secondaryCta?: {
+    text: string;
+    href: string;
+  };
+  variant?: 'default' | 'dark' | 'accent';
+}
+
+const {
+  title,
+  description,
+  primaryCta,
+  secondaryCta,
+  variant = 'default',
+} = Astro.props;
+
+const variants = {
+  default: {
+    bg: 'bg-neutral-50',
+    title: 'text-neutral-900',
+    description: 'text-neutral-900/70',
+    primaryBtn: 'primary',
+    secondaryBtn: 'secondary',
+  },
+  dark: {
+    bg: 'bg-neutral-900',
+    title: 'text-white',
+    description: 'text-white/70',
+    primaryBtn: 'primary',
+    secondaryBtn: 'outline',
+  },
+  accent: {
+    bg: 'bg-primary-500',
+    title: 'text-white',
+    description: 'text-white/90',
+    primaryBtn: 'secondary',
+    secondaryBtn: 'outline',
+  },
+};
+
+const styles = variants[variant];
+---
+
+<section class:list={['py-16 sm:py-20', styles.bg]}>
+  <Container>
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class:list={['font-display text-3xl font-medium sm:text-4xl lg:text-5xl', styles.title]}>
+        {title}
+      </h2>
+      {description && (
+        <p class:list={['mt-4 text-lg sm:text-xl', styles.description]}>
+          {description}
+        </p>
+      )}
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <Button href={primaryCta.href} variant={styles.primaryBtn as 'primary' | 'secondary'} size="lg">
+          {primaryCta.text}
+        </Button>
+        {secondaryCta && (
+          <Button href={secondaryCta.href} variant={styles.secondaryBtn as 'secondary' | 'outline'} size="lg">
+            {secondaryCta.text}
+          </Button>
+        )}
+      </div>
+    </div>
+  </Container>
+</section>

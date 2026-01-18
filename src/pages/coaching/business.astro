@@ -1,0 +1,303 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import Container from '@components/ui/Container.astro';
+import Button from '@components/ui/Button.astro';
+import Badge from '@components/ui/Badge.astro';
+import CTA from '@components/sections/CTA.astro';
+import { TESTIMONIALS } from '@lib/constants';
+import { Clock, Video, Users, MessageSquare, Lightbulb, Target, TrendingUp, DollarSign } from 'lucide-astro';
+---
+
+<PageLayout
+  title="Launch and Scale Your Business | Business Coaching Program"
+  description="A 6-week intensive for entrepreneurs ready to build and grow their online business. Learn from a founder who's built companies from zero to millions."
+  schema={{
+    type: 'Course',
+    data: {
+      name: 'Launch and Scale Your Business',
+      description: 'A 6-week intensive for entrepreneurs ready to build and grow their online business.',
+    },
+  }}
+>
+  <!-- Hero Section -->
+  <section class="bg-white py-16 sm:py-20 lg:py-28">
+    <Container>
+      <div class="max-w-3xl mx-auto text-center">
+        <Badge variant="primary" size="md" class="mb-4">
+          <Clock class="h-4 w-4 mr-1" aria-hidden="true" />
+          6-Week Intensive
+        </Badge>
+        <h1 class="font-display text-4xl font-medium text-neutral-900 sm:text-5xl lg:text-6xl">
+          Launch and Scale Your Online Business
+        </h1>
+        <p class="mt-4 text-xl text-neutral-900/70 font-display">
+          A Program for Founders Who Want to Build Something Real
+        </p>
+        <p class="mt-6 text-lg text-neutral-900/70">
+          You have an idea. Or maybe you have a business that's stuck. I've built companies from zero to millions in revenue. I've also made expensive mistakes that nearly cost me everything. This program shares both.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <Button href="#apply" variant="primary" size="lg">
+            Apply Now
+          </Button>
+          <Button href="#guide" variant="secondary" size="lg">
+            Download Program Guide
+          </Button>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Credibility -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container>
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl">
+          Why Learn From Me?
+        </h2>
+        <p class="mt-4 text-lg text-neutral-900/70">
+          I'm not a business coach who studied entrepreneurship. I'm an entrepreneur who figured it out through trial, error, and occasional disaster.
+        </p>
+      </div>
+
+      <div class="grid gap-8 lg:grid-cols-2">
+        <div class="bg-white rounded-xl p-8 shadow-sm border border-neutral-900/10">
+          <h3 class="font-display text-xl font-medium text-neutral-900 mb-4">Scorpio Music</h3>
+          <p class="text-neutral-900/70 mb-4">
+            Built one of Australia's largest independent music labels. Sold over 2 million records. Launched artists including Evermore, Matt Corby, and Lisa Mitchell. Established offices in Sydney, New York, and London.
+          </p>
+        </div>
+        <div class="bg-white rounded-xl p-8 shadow-sm border border-neutral-900/10">
+          <h3 class="font-display text-xl font-medium text-neutral-900 mb-4">Hey You</h3>
+          <p class="text-neutral-900/70 mb-4">
+            Co-founded Australia's largest mobile payments platform for cafes and restaurants. Grew to 500,000+ customers and 100,000+ weekly transactions. Achieved majority investment from Westpac's Reinventure fund.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-8 text-center">
+        <p class="text-lg text-neutral-900/70">
+          <strong>$17+ million raised</strong> across my ventures in venture capital and grants.
+        </p>
+        <p class="mt-2 text-neutral-900/60">
+          I've also experienced burnout, made hiring mistakes, launched products nobody wanted, and learned hard lessons about timing, market fit, and knowing when to pivot.
+        </p>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Curriculum -->
+  <section class="bg-white py-16 sm:py-20">
+    <Container>
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl">
+          Week-by-Week Curriculum
+        </h2>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div class="bg-neutral-50 rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-600 text-white text-sm font-medium">1</span>
+            <h3 class="font-display text-lg font-medium text-neutral-900">Differentiation and Positioning</h3>
+          </div>
+          <ul class="space-y-2 text-neutral-900/70 text-sm">
+            <li>Finding your unique angle in a crowded market</li>
+            <li>Building a brand that stands out</li>
+            <li>Identifying your true competitive advantage</li>
+          </ul>
+        </div>
+
+        <div class="bg-neutral-50 rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-600 text-white text-sm font-medium">2</span>
+            <h3 class="font-display text-lg font-medium text-neutral-900">Hiring and Team Building</h3>
+          </div>
+          <ul class="space-y-2 text-neutral-900/70 text-sm">
+            <li>When to hire (and when not to)</li>
+            <li>Finding engineers and designers without breaking the bank</li>
+            <li>Building a culture that attracts talent</li>
+          </ul>
+        </div>
+
+        <div class="bg-neutral-50 rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-600 text-white text-sm font-medium">3</span>
+            <h3 class="font-display text-lg font-medium text-neutral-900">Cost Estimation and Budgeting</h3>
+          </div>
+          <ul class="space-y-2 text-neutral-900/70 text-sm">
+            <li>Realistic financial planning for startups</li>
+            <li>Understanding burn rate and runway</li>
+            <li>When to invest and when to conserve</li>
+          </ul>
+        </div>
+
+        <div class="bg-neutral-50 rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-600 text-white text-sm font-medium">4</span>
+            <h3 class="font-display text-lg font-medium text-neutral-900">Product and Business Model Testing</h3>
+          </div>
+          <ul class="space-y-2 text-neutral-900/70 text-sm">
+            <li>Validating ideas before building</li>
+            <li>Customer development interviews</li>
+            <li>Iterating based on real feedback</li>
+          </ul>
+        </div>
+
+        <div class="bg-neutral-50 rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-600 text-white text-sm font-medium">5</span>
+            <h3 class="font-display text-lg font-medium text-neutral-900">Launch and Marketing</h3>
+          </div>
+          <ul class="space-y-2 text-neutral-900/70 text-sm">
+            <li>Go-to-market strategies that actually work</li>
+            <li>Building traction without massive budgets</li>
+            <li>Leveraging content and community</li>
+          </ul>
+        </div>
+
+        <div class="bg-neutral-50 rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-600 text-white text-sm font-medium">6</span>
+            <h3 class="font-display text-lg font-medium text-neutral-900">Funding and Scaling</h3>
+          </div>
+          <ul class="space-y-2 text-neutral-900/70 text-sm">
+            <li>Understanding your options (bootstrapping, angels, VC)</li>
+            <li>When raising makes sense (and when it doesn't)</li>
+            <li>Preparing for growth</li>
+          </ul>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Guest Speakers -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container narrow>
+      <div class="text-center">
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl mb-4">
+          Learn From Leaders
+        </h2>
+        <p class="text-lg text-neutral-900/70 mb-8">
+          Previous programs have featured leaders from companies like:
+        </p>
+        <div class="flex flex-wrap justify-center gap-6 text-lg font-medium text-neutral-900">
+          <span>Canva</span>
+          <span class="text-neutral-900/30">|</span>
+          <span>Atlassian</span>
+          <span class="text-neutral-900/30">|</span>
+          <span>Google</span>
+          <span class="text-neutral-900/30">|</span>
+          <span>Koala</span>
+        </div>
+        <p class="mt-6 text-neutral-900/60">
+          You'll learn from practitioners, not theorists.
+        </p>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="bg-white py-16 sm:py-20">
+    <Container narrow>
+      <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl text-center mb-12">
+        What Past Participants Say
+      </h2>
+      <div class="space-y-6">
+        {TESTIMONIALS.coaching.map((testimonial) => (
+          <blockquote class="bg-neutral-50 rounded-xl p-6 border border-neutral-900/10">
+            <p class="text-lg text-neutral-900/80 italic mb-4">"{testimonial.quote}"</p>
+            <p class="text-neutral-900/60"><strong>{testimonial.author}</strong>, {testimonial.title}</p>
+          </blockquote>
+        ))}
+      </div>
+    </Container>
+  </section>
+
+  <!-- Who It's For -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <Container narrow>
+      <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl text-center mb-12">
+        Who This Program Is For
+      </h2>
+      <div class="grid gap-8 md:grid-cols-2">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <h3 class="font-medium text-neutral-900 mb-4 text-primary-600">Ideal for:</h3>
+          <ul class="space-y-2 text-neutral-900/70">
+            <li>Pre-launch founders with ideas they want to validate and build</li>
+            <li>Early-stage entrepreneurs with businesses under $1M revenue who want to scale</li>
+            <li>Existing business owners looking to launch new online products or services</li>
+            <li>Corporate professionals planning to make the leap to entrepreneurship</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-neutral-900/10">
+          <h3 class="font-medium text-neutral-900 mb-4 text-neutral-500">Not for you if:</h3>
+          <ul class="space-y-2 text-neutral-900/70">
+            <li>You're looking for get-rich-quick schemes</li>
+            <li>You're not willing to do the work between sessions</li>
+            <li>You want someone to build your business for you</li>
+            <li>You're already at significant scale (Series B+)</li>
+          </ul>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Program Details -->
+  <section class="bg-white py-16 sm:py-20">
+    <Container narrow>
+      <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl text-center mb-12">
+        Program Details
+      </h2>
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div class="bg-neutral-50 rounded-xl p-6">
+          <p class="text-sm text-neutral-900/60 uppercase tracking-wider mb-1">Duration</p>
+          <p class="text-lg font-medium text-neutral-900">6 weeks</p>
+        </div>
+        <div class="bg-neutral-50 rounded-xl p-6">
+          <p class="text-sm text-neutral-900/60 uppercase tracking-wider mb-1">Format</p>
+          <p class="text-lg font-medium text-neutral-900">Online (participate from anywhere)</p>
+        </div>
+        <div class="bg-neutral-50 rounded-xl p-6">
+          <p class="text-sm text-neutral-900/60 uppercase tracking-wider mb-1">Time Commitment</p>
+          <p class="text-lg font-medium text-neutral-900">3-4 hours per week</p>
+        </div>
+        <div class="bg-neutral-50 rounded-xl p-6">
+          <p class="text-sm text-neutral-900/60 uppercase tracking-wider mb-1">Includes</p>
+          <p class="text-lg font-medium text-neutral-900">Live webinars, guest speakers, peer community</p>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Apply -->
+  <section id="apply" class="bg-neutral-50 py-16 sm:py-20">
+    <Container narrow>
+      <div class="text-center">
+        <h2 class="font-display text-3xl font-medium text-neutral-900 sm:text-4xl mb-4">
+          Ready to Build Something Real?
+        </h2>
+        <p class="text-lg text-neutral-900/70 mb-8 max-w-2xl mx-auto">
+          Stop consuming generic advice and start learning from someone who's actually done it.
+        </p>
+        <Button href="/contact/" variant="primary" size="lg">
+          Apply for the Next Cohort
+        </Button>
+        <p class="mt-4 text-sm text-neutral-900/60">
+          Applications are reviewed to ensure fit. You'll hear back within 48 hours.
+        </p>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Alternative CTA -->
+  <CTA
+    title="Ready to Raise Capital?"
+    description="If you already have a business and need funding, check out the Raise Capital on Your Terms program."
+    primaryCta={{
+      text: 'Learn About Capital Raising',
+      href: '/coaching/capital-raising/',
+    }}
+    variant="dark"
+  />
+</PageLayout>
